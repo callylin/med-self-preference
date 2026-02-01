@@ -1,0 +1,26 @@
+# Medical Self-Preference Research - Dependencies
+# Install with: pip install -r requirements.txt
+
+# LLM API clients
+openai>=1.0.0
+anthropic>=0.18.0
+google-generativeai>=0.3.0
+
+# Data handling
+datasets>=2.14.0  # HuggingFace datasets
+pandas>=2.0.0
+pyarrow>=12.0.0  # For parquet support
+
+# Utilities
+tqdm>=4.65.0
+pyyaml>=6.0
+python-dotenv>=1.0.0  # For .env file support
+
+# For analysis (optional, needed later)
+numpy>=1.24.0
+scipy>=1.10.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# For reproducibility
+# Python 3.10+ recommended

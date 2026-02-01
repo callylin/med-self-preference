@@ -1,0 +1,70 @@
+# Medical Self-Preference Experiment Configuration
+# ================================================
+
+# Experiment metadata
+experiment:
+  name: "medical_selfpref_pilot"
+  version: "0.1"
+  description: "Pilot study: 100 scenarios, 8 turns, 3 models"
+
+# Data source
+data:
+  dataset: "lavita/ChatDoctor-HealthCareMagic-100k"
+  num_scenarios: 100
+  random_seed: 42
+  
+# Conversation generation
+generation:
+  # Models to use for physician role (each generates separate conversations)
+  physician_models:
+    - "gpt-4"
+    - "claude-3-opus-20240229"
+    - "gemini-pro"
+    # Optional: add medical-specialized model
+    # - "openbiollm-70b"  # or similar open medical model
+  
+  # Model for patient simulation (standardized across all)
+  patient_simulator: "gpt-4"
+  
+  # Turn configuration
+  turns_per_conversation: 8  # Will generate 8 turns total
+  
+  # Generation parameters
+  temperature: 0.7
+  max_tokens_per_turn: 500
+
+# For turn-by-turn ablation (Experiment 2)
+ablation:
+  truncation_points: [2, 4, 6, 8]
+
+# Risk stratification (Experiment 5)  
+risk_classification:
+  # Keywords for heuristic classification
+  # You may want to use LLM-based classification for better accuracy
+  high_risk_keywords:
+    - "chest pain"
+    - "difficulty breathing"
+    - "severe"
+    - "emergency"
+    - "pediatric"
+    - "pregnancy"
+  medium_risk_keywords:
+    - "fever"
+    - "infection"
+    - "chronic"
+    - "medication"
+  
+# Output configuration
+output:
+  directory: "./output"
+  formats:
+    - "json"  # Primary format
+    # - "parquet"  # Optional: for larger datasets
+  
+  # Separate files per model for easier processing
+  split_by_model: true
+
+# API configuration (set via environment variables)
+# OPENAI_API_KEY=
+# ANTHROPIC_API_KEY=xxx  
+# GOOGLE_API_KEY=xxx
