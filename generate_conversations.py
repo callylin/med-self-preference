@@ -1,16 +1,4 @@
-"""
-Medical Multi-Turn Conversation Generator
-==========================================
-Generates synthetic multi-turn medical dialogues for self-preference bias research.
-
-Approach: Option A - Model as Physician, Standardized Patient Simulator
-- Each LLM plays the physician role
-- A separate "patient simulator" (can be same or different model) responds based on ground truth scenario
-- Fixed turn counts (2, 4, 6, 8) for systematic ablation
-
-Usage:
-    python generate_conversations.py --num_scenarios 100 --turns 8 --models gpt-4 claude-3-opus gemini-pro
-"""
+"""Generate multi-turn medical dialogues for self-preference research."""
 
 import json
 import asyncio
@@ -25,50 +13,40 @@ import re
 
 import yaml
 
-# You'll need to install these
-# pip install openai anthropic google-generativeai datasets tqdm
-
 from datasets import load_dataset
 from tqdm import tqdm
 
-# ============================================================================
-# DATA STRUCTURES
-# ============================================================================
-
 @dataclass
 class MedicalScenario:
-    """Seed scenario extracted from HealthCareMagic dataset"""
+    """Seed scenario extracted from HealthCareMagic dataset."""
     scenario_id: str
     original_patient_query: str
-    original_doctor_response: str  # Ground truth for patient simulator
-    chief_complaint: str  # Extracted/summarized
-    risk_level: str  # low, medium, high (you'll need to classify)
-    task_type: str  # diagnosis, treatment, explanation, followup
+    original_doctor_response: str
+    chief_complaint: str
+    risk_level: str
+    task_type: str
     
-@dataclass 
+@dataclass
 class ConversationTurn:
-    """Single turn in a dialogue"""
+    """Single turn in a dialogue."""
     turn_number: int
-    role: str  # "physician" or "patient"
+    role: str
     content: str
     timestamp: str
     
 @dataclass
 class GeneratedConversation:
-    """Complete multi-turn conversation"""
+    """Complete multi-turn conversation."""
     conversation_id: str
     scenario_id: str
-    generator_model: str  # Which model generated physician responses
-    patient_simulator: str  # Which model simulated patient
+    generator_model: str
+    patient_simulator: str
     turns: List[ConversationTurn]
     total_turns: int
     generation_params: Dict
     created_at: str
 
 
-# ============================================================================
-# PROMPT TEMPLATES
-# ============================================================================
 
 PHYSICIAN_SYSTEM_PROMPT = """You are an experienced clinician conducting a telemedicine consultation.
 
@@ -125,37 +103,28 @@ Current conversation:
 Respond naturally as the patient would. Remember to stay consistent with your condition and reveal information gradually."""
 
 
-# ============================================================================
-# SCENARIO PREPARATION
-# ============================================================================
 
 def load_healthcaremagic_scenarios(
     num_scenarios: int = 100,
     seed: int = 42,
     shuffle: bool = False,
 ) -> List[Dict]:
-    """
-    Load and prepare scenarios from HealthCareMagic dataset.
-    Returns raw data - you'll process it into MedicalScenario objects.
-    """
+    """Load and return raw HealthCareMagic samples."""
     print("Loading HealthCareMagic dataset...")
     
-    # Load from HuggingFace
     dataset = load_dataset("lavita/ChatDoctor-HealthCareMagic-100k", split="train")
     
-    # Optional shuffle with seed for reproducibility
     if shuffle:
         dataset = dataset.shuffle(seed=seed)
-    
-    # Take subset
+
     scenarios = []
     for i, item in enumerate(dataset):
         if i >= num_scenarios:
             break
         scenarios.append({
             "instruction": item["instruction"],
-            "input": item["input"],  # Patient query
-            "output": item["output"]  # Doctor response (ground truth)
+            "input": item["input"],
+            "output": item["output"]
         })
     
     print(f"Loaded {len(scenarios)} scenarios")
@@ -163,10 +132,7 @@ def load_healthcaremagic_scenarios(
 
 
 def classify_risk_level(patient_query: str, doctor_response: str) -> str:
-    """
-    Heuristic risk classification. 
-    You may want to use an LLM for more accurate classification.
-    """
+    """Heuristic risk classification based on keywords."""
     high_risk_keywords = [
         "chest pain", "difficulty breathing", "shortness of breath",
         "severe", "emergency", "unconscious", "stroke", "heart attack",
@@ -190,9 +156,7 @@ def classify_risk_level(patient_query: str, doctor_response: str) -> str:
 
 
 def classify_task_type(patient_query: str, doctor_response: str) -> str:
-    """
-    Classify the primary task type of the consultation.
-    """
+    """Classify the primary task type of the consultation."""
     text = (patient_query + " " + doctor_response).lower()
     
     if any(kw in text for kw in ["what is", "diagnos", "what do i have", "what could"]):
@@ -204,11 +168,11 @@ def classify_task_type(patient_query: str, doctor_response: str) -> str:
     elif any(kw in text for kw in ["follow up", "check", "return", "getting better"]):
         return "followup"
     else:
-        return "diagnosis"  # Default
+        return "diagnosis"
 
 
 def prepare_scenarios(raw_data: List[Dict]) -> List[MedicalScenario]:
-    """Convert raw dataset items to MedicalScenario objects"""
+    """Convert raw dataset items to MedicalScenario objects."""
     scenarios = []
     
     for i, item in enumerate(raw_data):
@@ -218,7 +182,7 @@ def prepare_scenarios(raw_data: List[Dict]) -> List[MedicalScenario]:
             scenario_id=f"hcm_{scenario_id}",
             original_patient_query=item["input"],
             original_doctor_response=item["output"],
-            chief_complaint=item["input"][:200],  # Truncate for summary
+            chief_complaint=item["input"][:200],
             risk_level=classify_risk_level(item["input"], item["output"]),
             task_type=classify_task_type(item["input"], item["output"])
         )
@@ -227,12 +191,9 @@ def prepare_scenarios(raw_data: List[Dict]) -> List[MedicalScenario]:
     return scenarios
 
 
-# ============================================================================
-# LLM API CLIENTS (Placeholder - implement based on your API access)
-# ============================================================================
 
 class LLMClient:
-    """Base class for LLM API clients"""
+    """Base class for LLM API clients."""
     
     def __init__(self, model_name: str):
         self.model_name = model_name
@@ -248,7 +209,7 @@ class LLMClient:
 
 
 class OpenAIClient(LLMClient):
-    """OpenAI API client"""
+    """OpenAI API client."""
     
     def __init__(self, model_name: str = "gpt-4"):
         super().__init__(model_name)
@@ -257,7 +218,7 @@ class OpenAIClient(LLMClient):
                 "OPENAI_API_KEY is not set. Please export OPENAI_API_KEY before running generation."
             )
         from openai import AsyncOpenAI
-        self.client = AsyncOpenAI()  # Uses OPENAI_API_KEY env var
+        self.client = AsyncOpenAI()
     
     async def generate(
         self,
@@ -279,7 +240,7 @@ class OpenAIClient(LLMClient):
 
 
 class AnthropicClient(LLMClient):
-    """Anthropic API client"""
+    """Anthropic API client."""
     
     def __init__(self, model_name: str = "claude-3-opus-20240229"):
         super().__init__(model_name)
@@ -288,7 +249,7 @@ class AnthropicClient(LLMClient):
                 "ANTHROPIC_API_KEY is not set. Please export ANTHROPIC_API_KEY before running generation."
             )
         import anthropic
-        self.client = anthropic.AsyncAnthropic()  # Uses ANTHROPIC_API_KEY env var
+        self.client = anthropic.AsyncAnthropic()
     
     async def generate(
         self,
@@ -310,7 +271,7 @@ class AnthropicClient(LLMClient):
 
 
 class GeminiClient(LLMClient):
-    """Google Gemini API client"""
+    """Google Gemini API client."""
     
     def __init__(self, model_name: str = "gemini-pro"):
         super().__init__(model_name)
@@ -330,7 +291,6 @@ class GeminiClient(LLMClient):
         temperature: float = 0.7,
         max_tokens: int = 500,
     ) -> str:
-        # Gemini combines system + user prompts differently
         full_prompt = f"{system_prompt}\n\n---\n\n{user_prompt}"
         response = await asyncio.to_thread(
             self.model.generate_content,
@@ -341,7 +301,7 @@ class GeminiClient(LLMClient):
 
 
 def get_client(model_name: str) -> LLMClient:
-    """Factory function to get appropriate client"""
+    """Factory function to get appropriate client."""
     model_lower = model_name.lower()
     
     if "gpt" in model_lower:
@@ -354,12 +314,9 @@ def get_client(model_name: str) -> LLMClient:
         raise ValueError(f"Unknown model: {model_name}")
 
 
-# ============================================================================
-# CONVERSATION GENERATION
-# ============================================================================
 
 def format_conversation_history(turns: List[ConversationTurn]) -> str:
-    """Format turns into readable conversation history"""
+    """Format turns into a readable conversation history."""
     lines = []
     for turn in turns:
         role_label = "Physician" if turn.role == "physician" else "Patient"
@@ -373,24 +330,16 @@ _ROLE_PREFIX_LINE_RE = re.compile(
 
 
 def cleanup_model_text(text: str) -> str:
-    """
-    Lightweight cleanup to reduce common formatting issues:
-    - strip leading role labels (and role labels at start of lines)
-    - collapse excessive blank lines
-    """
+    """Remove role labels and collapse excessive blank lines."""
     if not text:
         return text
 
-    # Remove role prefix at the start of the full message
     cleaned = _ROLE_PREFIX_LINE_RE.sub("", text.strip())
-
-    # Remove role prefix at the start of any line (e.g. "Physician: ...")
     cleaned_lines = []
     for line in cleaned.splitlines():
         cleaned_lines.append(_ROLE_PREFIX_LINE_RE.sub("", line).rstrip())
     cleaned = "\n".join(cleaned_lines).strip()
 
-    # Collapse 3+ newlines into 2
     cleaned = re.sub(r"\n{3,}", "\n\n", cleaned)
     return cleaned
 
@@ -423,9 +372,7 @@ async def maybe_repair(
     temperature: float,
     max_tokens: int,
 ) -> str:
-    """
-    Single-pass repair: rewrite to comply with formatting/length constraints without changing meaning.
-    """
+    """Rewrite to comply with constraints without changing meaning."""
     role_desc = "clinician" if role == "physician" else "patient"
     system = "You rewrite text to comply with constraints. Preserve meaning. Output only the rewritten text."
     user = (
@@ -449,29 +396,15 @@ async def generate_single_conversation(
     max_tokens_per_turn: int = 500,
     enable_repair: bool = False,
 ) -> GeneratedConversation:
-    """
-    Generate a complete multi-turn conversation for one scenario.
-    
-    Args:
-        scenario: The medical scenario to base conversation on
-        physician_client: LLM client for physician responses
-        patient_client: LLM client for patient simulation
-        num_turns: Total number of turns (each side speaks num_turns/2 times)
-        temperature: Generation temperature
-    
-    Returns:
-        GeneratedConversation object
-    """
+    """Generate a complete multi-turn conversation for one scenario."""
     turns = []
-    
-    # Prepare patient simulator context
+
     patient_system = PATIENT_SIMULATOR_SYSTEM_PROMPT.format(
         scenario_context=f"Chief complaint: {scenario.chief_complaint}",
         original_complaint=scenario.original_patient_query,
         reference_note=scenario.original_doctor_response
     )
-    
-    # Turn 0: Patient's initial complaint (from dataset)
+
     initial_turn = ConversationTurn(
         turn_number=0,
         role="patient",
@@ -479,13 +412,11 @@ async def generate_single_conversation(
         timestamp=datetime.now().isoformat()
     )
     turns.append(initial_turn)
-    
-    # Generate alternating turns
+
     for turn_num in range(1, num_turns):
         history = format_conversation_history(turns)
-        
+
         if turn_num % 2 == 1:
-            # Physician's turn
             prompt = PHYSICIAN_TURN_PROMPT.format(conversation_history=history)
             response = await physician_client.generate(
                 PHYSICIAN_SYSTEM_PROMPT, 
@@ -504,7 +435,6 @@ async def generate_single_conversation(
                     max_tokens=max_tokens_per_turn,
                 )
         else:
-            # Patient's turn
             prompt = PATIENT_TURN_PROMPT.format(conversation_history=history)
             response = await patient_client.generate(
                 patient_system,
@@ -522,7 +452,7 @@ async def generate_single_conversation(
                     temperature=0.5,
                     max_tokens=max_tokens_per_turn,
                 )
-        
+
         turn = ConversationTurn(
             turn_number=turn_num,
             role=role,
@@ -530,10 +460,9 @@ async def generate_single_conversation(
             timestamp=datetime.now().isoformat()
         )
         turns.append(turn)
-    
-    # Create conversation object
+
     conv_id = f"{scenario.scenario_id}_{physician_client.model_name}_{num_turns}t"
-    
+
     return GeneratedConversation(
         conversation_id=conv_id,
         scenario_id=scenario.scenario_id,
@@ -562,25 +491,18 @@ async def generate_all_conversations(
     max_tokens_per_turn: int = 500,
     enable_repair: bool = False,
 ) -> Dict[str, List[GeneratedConversation]]:
-    """
-    Generate conversations for all scenarios across all models.
-    
-    Returns dict mapping model_name -> list of conversations
-    """
+    """Generate conversations for all scenarios across all models."""
     output_dir.mkdir(parents=True, exist_ok=True)
-    
-    # Initialize patient simulator (shared across all)
+
     patient_client = get_client(patient_simulator_model)
-    
+
     results = {model: [] for model in physician_models}
-    
+
     for model_name in physician_models:
-        print(f"\n{'='*60}")
-        print(f"Generating conversations with {model_name}")
-        print(f"{'='*60}")
-        
+        print(f"\nGenerating conversations with {model_name}")
+
         physician_client = get_client(model_name)
-        
+
         for scenario in tqdm(scenarios, desc=f"{model_name}"):
             try:
                 conv = await generate_single_conversation(
@@ -598,19 +520,15 @@ async def generate_all_conversations(
             except Exception as e:
                 print(f"Error generating for scenario {scenario.scenario_id}: {e}")
                 continue
-        
-        # Save intermediate results
+
         save_conversations(results[model_name], output_dir / f"{model_name}_conversations.json")
-    
+
     return results
 
 
-# ============================================================================
-# OUTPUT HANDLING
-# ============================================================================
 
 def conversation_to_dict(conv: GeneratedConversation) -> Dict:
-    """Convert conversation to serializable dict"""
+    """Convert conversation to serializable dict."""
     return {
         "conversation_id": conv.conversation_id,
         "scenario_id": conv.scenario_id,
@@ -632,7 +550,7 @@ def conversation_to_dict(conv: GeneratedConversation) -> Dict:
 
 
 def save_conversations(conversations: List[GeneratedConversation], filepath: Path):
-    """Save conversations to JSON file"""
+    """Save conversations to JSON file."""
     data = [conversation_to_dict(c) for c in conversations]
     with open(filepath, 'w') as f:
         json.dump(data, f, indent=2)
@@ -640,16 +558,13 @@ def save_conversations(conversations: List[GeneratedConversation], filepath: Pat
 
 
 def save_scenarios(scenarios: List[MedicalScenario], filepath: Path):
-    """Save scenario metadata"""
+    """Save scenario metadata."""
     data = [asdict(s) for s in scenarios]
     with open(filepath, 'w') as f:
         json.dump(data, f, indent=2)
     print(f"Saved {len(scenarios)} scenarios to {filepath}")
 
 
-# ============================================================================
-# MAIN
-# ============================================================================
 
 def load_yaml_config(path: str) -> Dict:
     try:
@@ -726,28 +641,22 @@ async def main():
         if args.patient_temperature is not None
         else cfg_get(cfg, ["generation", "patient_temperature"], 0.8)
     )
-    
-    # Create output directory
+
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
-    
-    # Load and prepare scenarios
+
     raw_data = load_healthcaremagic_scenarios(
         num_scenarios=num_scenarios,
         seed=args.seed,
         shuffle=args.shuffle,
     )
     scenarios = prepare_scenarios(raw_data)
-    
-    # Save scenario metadata
+
     save_scenarios(scenarios, output_dir / "scenarios.json")
-    
-    # Print distribution
+
     print("\nScenario Distribution:")
     print(f"  Risk levels: {dict((r, sum(1 for s in scenarios if s.risk_level == r)) for r in ['low', 'medium', 'high'])}")
     print(f"  Task types: {dict((t, sum(1 for s in scenarios if s.task_type == t)) for t in ['diagnosis', 'treatment', 'explanation', 'followup'])}")
-    
-    # Generate conversations
     results = await generate_all_conversations(
         scenarios=scenarios,
         physician_models=models,
@@ -759,18 +668,13 @@ async def main():
         max_tokens_per_turn=max_tokens_per_turn,
         enable_repair=args.repair,
     )
-    
-    # Save combined results
     all_conversations = []
     for model, convs in results.items():
         all_conversations.extend(convs)
-    
+
     save_conversations(all_conversations, output_dir / "all_conversations.json")
-    
-    # Summary
-    print("\n" + "="*60)
-    print("GENERATION COMPLETE")
-    print("="*60)
+
+    print("\nGeneration complete")
     print(f"Total scenarios: {len(scenarios)}")
     print(f"Models used: {models}")
     print(f"Patient simulator: {patient_model}")

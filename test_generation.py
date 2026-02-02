@@ -1,22 +1,8 @@
-"""
-Quick Test Script for Medical Conversation Generation
-======================================================
-Run this first to verify your setup works before full generation.
-
-Usage:
-    python test_generation.py
-
-This will:
-1. Load 3 scenarios from HealthCareMagic
-2. Generate 1 conversation with GPT-4 (4 turns)
-3. Print the output for inspection
-"""
+"""Quick smoke tests for the conversation generator."""
 
 import asyncio
 import os
-from datetime import datetime
 
-# Check for API keys
 def check_api_keys():
     keys = {
         "OpenAI": os.getenv("OPENAI_API_KEY"),
@@ -24,16 +10,16 @@ def check_api_keys():
         "Google": os.getenv("GOOGLE_API_KEY")
     }
     
-    print("API Key Status:")
+    print("API key status:")
     for name, key in keys.items():
-        status = "✓ Set" if key else "✗ Not set"
+        status = "set" if key else "not set"
         print(f"  {name}: {status}")
     
     return keys
 
 
 async def test_openai():
-    """Test OpenAI API connection"""
+    """Test OpenAI API connection."""
     from openai import AsyncOpenAI
     
     client = AsyncOpenAI()
@@ -46,7 +32,7 @@ async def test_openai():
 
 
 async def test_anthropic():
-    """Test Anthropic API connection"""
+    """Test Anthropic API connection."""
     import anthropic
     
     client = anthropic.AsyncAnthropic()
@@ -59,7 +45,7 @@ async def test_anthropic():
 
 
 def test_dataset_loading():
-    """Test HuggingFace dataset loading"""
+    """Test HuggingFace dataset loading."""
     from datasets import load_dataset
     
     print("\nLoading HealthCareMagic dataset (first 3 rows)...")
@@ -68,10 +54,7 @@ def test_dataset_loading():
     print(f"Dataset loaded: {len(dataset)} total rows")
     print(f"Columns: {dataset.column_names}")
     
-    print("\n" + "="*60)
-    print("SAMPLE SCENARIO")
-    print("="*60)
-    
+    print("\nSample scenario")
     sample = dataset[0]
     print(f"\nInstruction: {sample['instruction'][:100]}...")
     print(f"\nPatient Input: {sample['input'][:300]}...")
@@ -81,12 +64,11 @@ def test_dataset_loading():
 
 
 async def test_mini_conversation():
-    """Generate a mini 4-turn conversation to verify the pipeline"""
+    """Generate a mini 4-turn conversation to verify the pipeline."""
     from openai import AsyncOpenAI
     
     client = AsyncOpenAI()
     
-    # Simplified prompts for testing
     physician_system = """You are a physician in a telemedicine consultation. 
     Ask relevant questions and provide medical guidance. Be concise."""
     
@@ -96,12 +78,10 @@ async def test_mini_conversation():
     
     turns = []
     
-    # Turn 0: Patient initial
     patient_initial = "I've had this headache for about 3 days now. It's worse when I wake up."
     turns.append({"role": "patient", "content": patient_initial})
     print(f"\nPatient (Turn 0): {patient_initial}")
-    
-    # Turn 1: Physician response
+
     response = await client.chat.completions.create(
         model="gpt-4",
         messages=[
@@ -113,8 +93,7 @@ async def test_mini_conversation():
     physician_1 = response.choices[0].message.content
     turns.append({"role": "physician", "content": physician_1})
     print(f"\nPhysician (Turn 1): {physician_1}")
-    
-    # Turn 2: Patient follow-up
+
     history = f"Patient: {patient_initial}\nPhysician: {physician_1}"
     response = await client.chat.completions.create(
         model="gpt-4",
@@ -127,8 +106,7 @@ async def test_mini_conversation():
     patient_2 = response.choices[0].message.content
     turns.append({"role": "patient", "content": patient_2})
     print(f"\nPatient (Turn 2): {patient_2}")
-    
-    # Turn 3: Physician follow-up
+
     history += f"\nPatient: {patient_2}"
     response = await client.chat.completions.create(
         model="gpt-4",
@@ -146,54 +124,43 @@ async def test_mini_conversation():
 
 
 async def main():
-    print("="*60)
-    print("MEDICAL CONVERSATION GENERATION - TEST SCRIPT")
-    print("="*60)
-    
-    # 1. Check API keys
+    print("Medical conversation generation test")
     keys = check_api_keys()
-    
-    # 2. Test dataset loading
+
     try:
-        dataset = test_dataset_loading()
-        print("\n✓ Dataset loading successful")
+        test_dataset_loading()
+        print("\nDataset loading: OK")
     except Exception as e:
-        print(f"\n✗ Dataset loading failed: {e}")
+        print(f"\nDataset loading: FAIL ({e})")
         return
-    
-    # 3. Test API connections
+
     if keys["OpenAI"]:
         print("\nTesting OpenAI API...")
         try:
             result = await test_openai()
-            print(f"✓ OpenAI API: {result}")
+            print(f"OpenAI API: OK ({result})")
         except Exception as e:
-            print(f"✗ OpenAI API failed: {e}")
+            print(f"OpenAI API: FAIL ({e})")
     
     if keys["Anthropic"]:
         print("\nTesting Anthropic API...")
         try:
             result = await test_anthropic()
-            print(f"✓ Anthropic API: {result}")
+            print(f"Anthropic API: OK ({result})")
         except Exception as e:
-            print(f"✗ Anthropic API failed: {e}")
-    
-    # 4. Test mini conversation generation
+            print(f"Anthropic API: FAIL ({e})")
+
     if keys["OpenAI"]:
-        print("\n" + "="*60)
-        print("GENERATING TEST CONVERSATION (4 turns)")
-        print("="*60)
+        print("\nGenerating test conversation (4 turns)")
         try:
             turns = await test_mini_conversation()
-            print("\n✓ Conversation generation successful!")
+            print("\nConversation generation: OK")
             print(f"  Generated {len(turns)} turns")
         except Exception as e:
-            print(f"\n✗ Conversation generation failed: {e}")
-    
-    print("\n" + "="*60)
-    print("TEST COMPLETE")
-    print("="*60)
-    print("\nIf all tests passed, you can run the full generation with:")
+            print(f"\nConversation generation: FAIL ({e})")
+
+    print("\nTest complete")
+    print("Run full generation with:")
     print("  python generate_conversations.py --num_scenarios 100 --turns 8")
 
 
