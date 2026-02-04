@@ -12,9 +12,13 @@ import hashlib
 import re
 
 import yaml
+from dotenv import load_dotenv
 
 from datasets import load_dataset
 from tqdm import tqdm
+
+# Load environment variables from .env file
+load_dotenv()
 
 @dataclass
 class MedicalScenario:
@@ -521,7 +525,7 @@ async def generate_all_conversations(
                 print(f"Error generating for scenario {scenario.scenario_id}: {e}")
                 continue
 
-        save_conversations(results[model_name], output_dir / f"{model_name}_conversations.json")
+        save_conversations(results[model_name], output_dir / f"{model_name}_{num_turns}t_conversations.json")
 
     return results
 

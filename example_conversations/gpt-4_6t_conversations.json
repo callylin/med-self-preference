@@ -1,0 +1,1302 @@
+[
+  {
+    "conversation_id": "hcm_b1d8eccb8656_gpt-4_6t",
+    "scenario_id": "hcm_b1d8eccb8656",
+    "generator_model": "gpt-4",
+    "patient_simulator": "gpt-4",
+    "total_turns": 6,
+    "generation_params": {
+      "physician_temperature": 0.3,
+      "patient_temperature": 0.8,
+      "max_tokens_per_turn": 350,
+      "num_turns": 6
+    },
+    "created_at": "2026-02-03T23:21:19.201108",
+    "turns": [
+      {
+        "turn_number": 0,
+        "role": "patient",
+        "content": "I woke up this morning feeling the whole room is spinning when i was sitting down. I went to the bathroom walking unsteadily, as i tried to focus i feel nauseous. I try to vomit but it wont come out.. After taking panadol and sleep for few hours, i still feel the same.. By the way, if i lay down or sit down, my head do not spin, only when i want to move around then i feel the whole world is spinning.. And it is normal stomach discomfort at the same time? Earlier after i relieved myself, the spinning lessen so i am not sure whether its connected or coincidences.. Thank you doc!",
+        "timestamp": "2026-02-03T23:21:01.811126"
+      },
+      {
+        "turn_number": 1,
+        "role": "physician",
+        "content": "I'm sorry to hear you're feeling this way. To better understand your symptoms, could you tell me if you've had any recent head injuries or illnesses? Do you have any hearing loss or ringing in your ears? Also, have you experienced similar episodes in the past?",
+        "timestamp": "2026-02-03T23:21:03.962738"
+      },
+      {
+        "turn_number": 2,
+        "role": "patient",
+        "content": "No, doc, I haven't had any recent head injuries or illnesses that I can remember. As for my ears, I haven't noticed any hearing loss or ringing. This spinning feeling is all new to me. I've never experienced anything like this before. It's quite scary, to be honest.",
+        "timestamp": "2026-02-03T23:21:06.078333"
+      },
+      {
+        "turn_number": 3,
+        "role": "physician",
+        "content": "I understand this must be quite unsettling for you. To help narrow down the possible causes, could you tell me if you have any other symptoms such as a fever, headache, or neck stiffness? Are there any specific movements that trigger the spinning sensation? Lastly, do you have any medical conditions or are you currently taking any medications?",
+        "timestamp": "2026-02-03T23:21:09.166906"
+      },
+      {
+        "turn_number": 4,
+        "role": "patient",
+        "content": "No, there's no fever or headache, and my neck seems okay. It's mainly just the spinning, and it seems to happen when I get up from lying down or sitting. As for medical conditions, I have high blood pressure that I manage with medication. But that's about it, doc.",
+        "timestamp": "2026-02-03T23:21:11.631883"
+      },
+      {
+        "turn_number": 5,
+        "role": "physician",
+        "content": "Thank you for the additional information. Your symptoms suggest a condition called Benign Paroxysmal Positional Vertigo (BPPV), which is a common cause of vertigo and is often triggered by changes in position. However, it could also be related to your high blood pressure.\n\nHere's our plan:\n1. Continue to rest and avoid sudden movements that trigger the spinning sensation.\n2. Monitor your blood pressure regularly.\n3. Consult with a local healthcare provider for a physical examination and possibly maneuvers to help with BPPV.\n\nIf your symptoms worsen, you develop new symptoms like severe headache, difficulty speaking or understanding speech, or weakness on one side of your body, seek emergency medical attention immediately. These could be signs of a more serious condition like a stroke.",
+        "timestamp": "2026-02-03T23:21:19.201067"
+      }
+    ]
+  },
+  {
+    "conversation_id": "hcm_818087b67796_gpt-4_6t",
+    "scenario_id": "hcm_818087b67796",
+    "generator_model": "gpt-4",
+    "patient_simulator": "gpt-4",
+    "total_turns": 6,
+    "generation_params": {
+      "physician_temperature": 0.3,
+      "patient_temperature": 0.8,
+      "max_tokens_per_turn": 350,
+      "num_turns": 6
+    },
+    "created_at": "2026-02-03T23:21:37.333264",
+    "turns": [
+      {
+        "turn_number": 0,
+        "role": "patient",
+        "content": "My baby has been pooing 5-6 times a day for a week. In the last few days it has increased to 7 and they are very watery with green stringy bits in them. He does not seem unwell i.e no temperature and still eating. He now has a very bad nappy rash from the pooing ...help!",
+        "timestamp": "2026-02-03T23:21:19.201548"
+      },
+      {
+        "turn_number": 1,
+        "role": "physician",
+        "content": "I'm sorry to hear about your baby's condition. To help me understand better, could you please tell me the baby's age? Also, has there been any recent changes in his diet or introduction of new foods? Lastly, has he been exposed to any sick contacts recently?",
+        "timestamp": "2026-02-03T23:21:22.072188"
+      },
+      {
+        "turn_number": 2,
+        "role": "patient",
+        "content": "He's just 6 months old. We started introducing some solids a couple of weeks ago, but nothing new in the last week. As for sick contacts, not that I'm aware of. Everyone in the family is in good health. It's just so distressing to see him pooing so much and the nappy rash looks so sore.",
+        "timestamp": "2026-02-03T23:21:24.937417"
+      },
+      {
+        "turn_number": 3,
+        "role": "physician",
+        "content": "I understand your concern. The introduction of solids can sometimes change a baby's bowel habits and stool appearance. However, the frequency and consistency you're describing could also suggest a possible infection or intolerance.\n\nTo help narrow down the cause, could you let me know if the baby is showing any signs of discomfort or pain? Are there any other changes you've noticed, such as weight loss or changes in behavior? Lastly, what solids have you introduced so far?",
+        "timestamp": "2026-02-03T23:21:28.828272"
+      },
+      {
+        "turn_number": 4,
+        "role": "patient",
+        "content": "He's been a bit fussier than usual, especially during diaper changes, I guess because of the rash. But other than that, he seems his cheerful self. No noticeable weight loss. The solids we have tried so far are pureed carrots, peas, and a little bit of mashed banana.",
+        "timestamp": "2026-02-03T23:21:31.176630"
+      },
+      {
+        "turn_number": 5,
+        "role": "physician",
+        "content": "Thank you for the additional information. It's reassuring that he is generally well and not losing weight. The fussiness during diaper changes is likely due to the nappy rash. His symptoms could be due to a dietary change or a mild gastrointestinal infection.\n\nHere's what I recommend:\n1. Keep him hydrated, continue breastfeeding or formula as usual.\n2. Temporarily revert back to a previous diet where his stools were normal.\n3. Apply a barrier cream to protect his skin from the stool and help with the nappy rash.\n\nIf his symptoms persist, worsen, or if he develops a fever, vomiting, or blood in his stool, please seek immediate medical attention.",
+        "timestamp": "2026-02-03T23:21:37.333228"
+      }
+    ]
+  },
+  {
+    "conversation_id": "hcm_db3b5df14fc4_gpt-4_6t",
+    "scenario_id": "hcm_db3b5df14fc4",
+    "generator_model": "gpt-4",
+    "patient_simulator": "gpt-4",
+    "total_turns": 6,
+    "generation_params": {
+      "physician_temperature": 0.3,
+      "patient_temperature": 0.8,
+      "max_tokens_per_turn": 350,
+      "num_turns": 6
+    },
+    "created_at": "2026-02-03T23:21:56.680322",
+    "turns": [
+      {
+        "turn_number": 0,
+        "role": "patient",
+        "content": "Hello, My husband is taking Oxycodone due to a broken leg/surgery. He has been taking this pain medication for one month. We are trying to conceive our second baby. Will this medication afect the fetus? Or the health of the baby? Or can it bring birth defects? Thank you.",
+        "timestamp": "2026-02-03T23:21:37.333712"
+      },
+      {
+        "turn_number": 1,
+        "role": "physician",
+        "content": "Oxycodone is a potent pain medication that can potentially have effects on fertility and a developing fetus. However, the specific impact can vary based on factors such as dosage and duration of use. To better advise you, could you please tell me:\n1. How much oxycodone is your husband taking daily?\n2. Is he taking any other medications?\n3. Are there any known genetic conditions in either of your families?",
+        "timestamp": "2026-02-03T23:21:40.557411"
+      },
+      {
+        "turn_number": 2,
+        "role": "patient",
+        "content": "He's taking 10mg of Oxycodone every 4 hours. He's not on any other medication. As far as I know, there aren't any genetic conditions in our families. I'm just worried if his medication could somehow harm our future baby.",
+        "timestamp": "2026-02-03T23:21:43.350817"
+      },
+      {
+        "turn_number": 3,
+        "role": "physician",
+        "content": "I understand your concerns. While oxycodone can potentially affect sperm quality temporarily, it's not known to cause birth defects. However, it's always best to minimize exposure to medications when trying to conceive. Here's what I suggest:\n\n1. Your husband should discuss with his doctor about potentially reducing the dosage or switching to a different pain medication.\n2. Both of you should maintain a healthy lifestyle, including a balanced diet and regular exercise.\n3. Consider waiting until your husband has stopped the medication before trying to conceive.\n\nPlease seek immediate medical attention if your husband experiences severe withdrawal symptoms like extreme restlessness, fast heartbeat, or difficulty breathing after reducing or stopping the medication.",
+        "timestamp": "2026-02-03T23:21:49.617049"
+      },
+      {
+        "turn_number": 4,
+        "role": "patient",
+        "content": "Oh, I see. I didn't know that his medication could affect his sperm quality. I will definitely talk to him about discussing this with his doctor and maybe looking into a different pain medication. As for waiting till he stops the medication before trying to conceive, that might be a little tough because we've been really looking forward to having our second baby. But, we definitely want the best for our future child, so we'll consider it. Thank you for your advice.",
+        "timestamp": "2026-02-03T23:21:53.510006"
+      },
+      {
+        "turn_number": 5,
+        "role": "physician",
+        "content": "I'm glad to hear you're considering the advice. It's important to remember that any potential effects on sperm from oxycodone are usually temporary and reversible once the medication is stopped. If waiting to conceive is difficult, another option could be to consult a fertility specialist who can provide more specific guidance. Lastly, remember to take prenatal vitamins, especially folic acid, as they are essential for the healthy development of the baby. If you notice any unusual symptoms during pregnancy, seek medical attention promptly.",
+        "timestamp": "2026-02-03T23:21:56.680283"
+      }
+    ]
+  },
+  {
+    "conversation_id": "hcm_3d52c83750b6_gpt-4_6t",
+    "scenario_id": "hcm_3d52c83750b6",
+    "generator_model": "gpt-4",
+    "patient_simulator": "gpt-4",
+    "total_turns": 6,
+    "generation_params": {
+      "physician_temperature": 0.3,
+      "patient_temperature": 0.8,
+      "max_tokens_per_turn": 350,
+      "num_turns": 6
+    },
+    "created_at": "2026-02-03T23:22:17.041658",
+    "turns": [
+      {
+        "turn_number": 0,
+        "role": "patient",
+        "content": "lump under left nipple and stomach pain (male) Hi,I have recently noticed a few weeks ago a lump under my nipple, it hurts to touch and is about the size of a quarter. Also I have bern experiencing stomach pains that prevent me from eating. I immediatly feel full and have extreme pain. Please help",
+        "timestamp": "2026-02-03T23:21:56.680601"
+      },
+      {
+        "turn_number": 1,
+        "role": "physician",
+        "content": "I'm sorry to hear you're not feeling well. To better understand your symptoms, could you please tell me:\n1. If the lump under your nipple has changed in size or shape since you first noticed it?\n2. Can you describe the location and nature of your stomach pain (sharp, dull, cramping)?\n3. Have you noticed any other symptoms such as weight loss, changes in bowel movements, or fever?",
+        "timestamp": "2026-02-03T23:21:59.400651"
+      },
+      {
+        "turn_number": 2,
+        "role": "patient",
+        "content": "Well, I guess the lump hasn't really changed in size since I noticed it. It's stayed about the same. The stomach pain is mostly in the upper part of my tummy, right in the middle. It's more like a sharp pain than anything else. I haven't really noticed any weight loss or fever but my bowel movements have been kind of irregular lately. I've been going less frequently than usual.",
+        "timestamp": "2026-02-03T23:22:02.911044"
+      },
+      {
+        "turn_number": 3,
+        "role": "physician",
+        "content": "I appreciate the extra details. To better assess your symptoms, could you:\n1. Describe any changes in your bowel movements? Are they firmer or looser than normal, or have you seen any blood?\n2. Confirm if you've had any nausea, vomiting, or heartburn?\n3. Share if there's a family history of gastrointestinal problems or breast cancer?",
+        "timestamp": "2026-02-03T23:22:07.451650"
+      },
+      {
+        "turn_number": 4,
+        "role": "patient",
+        "content": "Well, my bowel movements have been harder than usual, and it's kinda painful to go. I haven't seen any blood though. I've been feeling nauseous and there's been a bit of vomiting, especially after trying to eat. As for heartburn, not really. On the family history part, I can't recall anyone having breast cancer, but my dad did have some stomach problems a while back.",
+        "timestamp": "2026-02-03T23:22:12.895222"
+      },
+      {
+        "turn_number": 5,
+        "role": "physician",
+        "content": "Thank you for the information. Based on what you've told me, the lump under your nipple could be gynecomastia, which is often harmless but can sometimes be painful. Your stomach symptoms, along with the nausea and vomiting, suggest a possible gastric issue such as gastritis or a peptic ulcer.\n\nHere's our plan:\n1. Schedule an appointment with your primary care doctor for a physical exam of the breast lump and possible imaging.\n2. Start a trial of over-the-counter omeprazole (Prilosec) for your stomach pain. Follow the instructions on the package.\n3. Increase your fluid and fiber intake to help with constipation.\n\nPlease seek immediate medical attention if you experience severe abdominal pain, vomiting blood, or black, tarry stools. These could indicate a more serious condition.",
+        "timestamp": "2026-02-03T23:22:17.041630"
+      }
+    ]
+  },
+  {
+    "conversation_id": "hcm_f9ef54f5511b_gpt-4_6t",
+    "scenario_id": "hcm_f9ef54f5511b",
+    "generator_model": "gpt-4",
+    "patient_simulator": "gpt-4",
+    "total_turns": 6,
+    "generation_params": {
+      "physician_temperature": 0.3,
+      "patient_temperature": 0.8,
+      "max_tokens_per_turn": 350,
+      "num_turns": 6
+    },
+    "created_at": "2026-02-03T23:22:31.595811",
+    "turns": [
+      {
+        "turn_number": 0,
+        "role": "patient",
+        "content": "I have a 5 month old baby who is very congested with a terrible cough. Its rattly/raspy and croupy sounding cough. She started choking on her coughs and the mucous that has come up. She also has a fever and runny nose. Should i take her to urgent care?",
+        "timestamp": "2026-02-03T23:22:17.041945"
+      },
+      {
+        "turn_number": 1,
+        "role": "physician",
+        "content": "I'm sorry to hear your baby is unwell. It's important to clarify a few things:\n1. How high is her fever and how long has it been present?\n2. Is she having any difficulty breathing or feeding?\n3. Has she been exposed to anyone with a respiratory infection recently?\nPlease remember, if her symptoms worsen or she becomes lethargic, seek immediate medical attention.",
+        "timestamp": "2026-02-03T23:22:19.722746"
+      },
+      {
+        "turn_number": 2,
+        "role": "patient",
+        "content": "Her fever has been hovering around 101\u00b0F for the past couple of days. She seems to be feeding okay, but it's definitely harder for her with all the congestion. As for exposure, her older sister did have a cold last week. I'm watching her closely, but it's really scary when she chokes on her coughs.",
+        "timestamp": "2026-02-03T23:22:21.899482"
+      },
+      {
+        "turn_number": 3,
+        "role": "physician",
+        "content": "I understand your concern, it can be distressing to see your baby unwell. Given her symptoms and exposure to her sister's cold, she may have a viral upper respiratory infection. However, it's important to monitor her closely.\n\n1. Is she able to sleep or does the cough keep her awake?\n2. Has there been any change in her diapers - less wet or fewer bowel movements?\n3. Has the color of her mucus changed or has she vomited?\n\nIf she develops difficulty breathing, her lips or face turn blue, or she becomes unresponsive, please take her to the emergency department immediately.",
+        "timestamp": "2026-02-03T23:22:26.072329"
+      },
+      {
+        "turn_number": 4,
+        "role": "patient",
+        "content": "She's been having a hard time sleeping because of the cough. It's pretty much the same throughout the day, but gets worse at night. As for diapers, I haven't noticed any major changes. Her mucus is clear, but she has vomited a few times after coughing fits. It's really all so worrying.",
+        "timestamp": "2026-02-03T23:22:28.222373"
+      },
+      {
+        "turn_number": 5,
+        "role": "physician",
+        "content": "I understand your worry. The symptoms you described suggest she may have a viral infection like croup, which often worsens at night. However, vomiting after coughing can also be a sign of pertussis (whooping cough).\n\nHere's what I recommend:\n1. Continue monitoring her fever, breathing, and alertness closely.\n2. Use a humidifier in her room and keep her head elevated to help with the cough and congestion.\n3. Contact her pediatrician as soon as possible to discuss her symptoms and possibly arrange a pertussis test.\n\nIf her fever rises above 104\u00b0F, she has difficulty breathing, becomes less responsive, or her symptoms worsen, take her to the emergency department immediately.",
+        "timestamp": "2026-02-03T23:22:31.595777"
+      }
+    ]
+  },
+  {
+    "conversation_id": "hcm_f2239ed079cc_gpt-4_6t",
+    "scenario_id": "hcm_f2239ed079cc",
+    "generator_model": "gpt-4",
+    "patient_simulator": "gpt-4",
+    "total_turns": 6,
+    "generation_params": {
+      "physician_temperature": 0.3,
+      "patient_temperature": 0.8,
+      "max_tokens_per_turn": 350,
+      "num_turns": 6
+    },
+    "created_at": "2026-02-03T23:22:47.679205",
+    "turns": [
+      {
+        "turn_number": 0,
+        "role": "patient",
+        "content": "I am F 38 in good shape work out (do triathlons) regular but have had back pain from different reasons throughout my life now I every so often wake up with severe lower back, hip pain for no reason. today the pain is almost taking my breathe away when i move. It is a dull pain when i am just lying down but the moment I make any sort of movement I have sharp and sometimes shooting pain down my legs.",
+        "timestamp": "2026-02-03T23:22:31.596250"
+      },
+      {
+        "turn_number": 1,
+        "role": "physician",
+        "content": "I'm sorry to hear about your pain. To help me understand better, could you please tell me when this pain started and if there was any specific event that triggered it? Does anything make the pain better or worse? Have you noticed any numbness or weakness in your legs, or changes in your bowel or bladder function?",
+        "timestamp": "2026-02-03T23:22:34.776281"
+      },
+      {
+        "turn_number": 2,
+        "role": "patient",
+        "content": "The pain started a few months ago but it was never this bad. It's just recently that it's become almost unbearable. I can't remember any specific event that triggered it. I haven't noticed any numbness or weakness in my legs, nor changes in my bowel or bladder function. As for what makes it better or worse, it seems like lying down helps a bit, but any sort of movement, even just a small twist or turn, makes it a lot worse.",
+        "timestamp": "2026-02-03T23:22:37.777917"
+      },
+      {
+        "turn_number": 3,
+        "role": "physician",
+        "content": "I appreciate your detailed response. Given your symptoms, we need to consider conditions like sciatica, lumbar disc herniation, or possibly a musculoskeletal strain. To narrow this down, could you tell me if the pain radiates down to a specific part of your leg or foot? Also, have you tried any medications for this pain? Lastly, have you had any imaging done for your back pain in the past?",
+        "timestamp": "2026-02-03T23:22:40.489985"
+      },
+      {
+        "turn_number": 4,
+        "role": "patient",
+        "content": "The pain does seem to radiate down to my left leg, but I can't say it goes all the way to my foot, more like around the back of my thigh. I've been using over-the-counter pain relief like ibuprofen, but it doesn't seem to be helping much anymore. And no, I've never had any imaging done for my back before. This is kind of scary, should I be really worried about this?",
+        "timestamp": "2026-02-03T23:22:43.606930"
+      },
+      {
+        "turn_number": 5,
+        "role": "physician",
+        "content": "I understand your concern. The pain radiating down your leg suggests a condition like sciatica or a lumbar disc herniation. It's important to manage this appropriately to prevent worsening symptoms. Here's our plan:\n\n1. Rest and avoid movements that worsen your pain.\n2. Increase your over-the-counter pain relief dose (if within safe limits) or consider adding a muscle relaxant.\n3. Schedule an appointment for imaging (like an MRI) to better understand the cause of your pain.\n\nIf your pain becomes unbearable, you lose control of your bowel or bladder, or you notice weakness or numbness in your legs, seek immediate medical attention. These could be signs of a more serious condition.",
+        "timestamp": "2026-02-03T23:22:47.679171"
+      }
+    ]
+  },
+  {
+    "conversation_id": "hcm_097f55305bf5_gpt-4_6t",
+    "scenario_id": "hcm_097f55305bf5",
+    "generator_model": "gpt-4",
+    "patient_simulator": "gpt-4",
+    "total_turns": 6,
+    "generation_params": {
+      "physician_temperature": 0.3,
+      "patient_temperature": 0.8,
+      "max_tokens_per_turn": 350,
+      "num_turns": 6
+    },
+    "created_at": "2026-02-03T23:23:06.415860",
+    "turns": [
+      {
+        "turn_number": 0,
+        "role": "patient",
+        "content": "sir, MY uncle has ILD-Interstitial Lung disease.from my research over google i found that the cause is important to be known. the cause wat i feel is due to breakage of acid bottle in bathroom which caused lot of smoke and that time he wasnot able to be normal for 15-20 minutes. then he was normal .may be that would have been the reason for this ILD. Please suggest wat we should do",
+        "timestamp": "2026-02-03T23:22:47.679636"
+      },
+      {
+        "turn_number": 1,
+        "role": "physician",
+        "content": "I understand your concern about your uncle's interstitial lung disease (ILD). While certain environmental exposures can contribute to ILD, it's important to note that many cases are idiopathic, meaning we can't identify a specific cause. To better assist you, I need some additional information:\n\n1. When was your uncle diagnosed with ILD?\n2. What symptoms is he currently experiencing?\n3. Has he had any other significant exposures or does he have any other medical conditions?",
+        "timestamp": "2026-02-03T23:22:50.340500"
+      },
+      {
+        "turn_number": 2,
+        "role": "patient",
+        "content": "He got diagnosed with ILD about 6 months ago. As for symptoms, he's been having a dry cough and gets tired very easily. He never had any other major health issues before this, and about significant exposures, I can't think of anything other than that acid bottle incident.",
+        "timestamp": "2026-02-03T23:22:52.208729"
+      },
+      {
+        "turn_number": 3,
+        "role": "physician",
+        "content": "Thank you for the additional information. Your uncle's symptoms of dry cough and fatigue are common in ILD. The incident with the acid bottle could potentially have contributed, but it's hard to say definitively.\n\nHere's what I suggest:\n\n1. Ensure he is following the treatment plan provided by his doctor, which may include medications to slow disease progression.\n2. Encourage him to avoid any further potential lung irritants, like smoke or harsh chemicals.\n3. Regular follow-up appointments with his pulmonologist are crucial for monitoring his condition.\n\nIf he experiences worsening symptoms like increased shortness of breath, chest pain, or unexplained weight loss, he should seek immediate medical attention.",
+        "timestamp": "2026-02-03T23:22:59.170966"
+      },
+      {
+        "turn_number": 4,
+        "role": "patient",
+        "content": "Ok, got it. He's been taking his prescribed medication, but I'll make sure he avoids any possible irritants. And we'll definitely keep up with his check-ups. Just one more thing, is there any specific diet or lifestyle changes that might help him? He's pretty worried and willing to do anything to get better.",
+        "timestamp": "2026-02-03T23:23:03.141296"
+      },
+      {
+        "turn_number": 5,
+        "role": "physician",
+        "content": "Absolutely, lifestyle changes can certainly help manage his ILD. Here are a few suggestions:\n\n1. Balanced Diet: Consuming a diet rich in fruits, vegetables, lean proteins, and whole grains can support overall health and immune function.\n2. Regular Exercise: While he should avoid overexertion, light activities like walking can help maintain lung capacity.\n3. No Smoking: If he smokes, quitting is crucial. Even secondhand smoke can worsen ILD.\n\nAlso, ensure he gets vaccinated for flu and pneumonia, as these can be particularly dangerous for people with ILD. If his symptoms worsen or he develops new symptoms, he should seek medical attention promptly.",
+        "timestamp": "2026-02-03T23:23:06.415829"
+      }
+    ]
+  },
+  {
+    "conversation_id": "hcm_e2270f062c85_gpt-4_6t",
+    "scenario_id": "hcm_e2270f062c85",
+    "generator_model": "gpt-4",
+    "patient_simulator": "gpt-4",
+    "total_turns": 6,
+    "generation_params": {
+      "physician_temperature": 0.3,
+      "patient_temperature": 0.8,
+      "max_tokens_per_turn": 350,
+      "num_turns": 6
+    },
+    "created_at": "2026-02-03T23:23:22.501979",
+    "turns": [
+      {
+        "turn_number": 0,
+        "role": "patient",
+        "content": "my husband was working on a project in the house and all of a sudden a bump about the size of a half dollar appeard on his left leg inside below the knee. He is 69 years old and had triple by pass surgery 7 years ago. It stung when it first happened. Doesn t hurt now. He is seated with his leg ellevated. Is this an emergency?",
+        "timestamp": "2026-02-03T23:23:06.416150"
+      },
+      {
+        "turn_number": 1,
+        "role": "physician",
+        "content": "I'm ready to assist. Could you provide more details about the bump? Is it red, warm, or enlarged? Did it show up following an injury or did it just appear? Is your husband experiencing any other symptoms such as fever, difficulty breathing, or chest discomfort?",
+        "timestamp": "2026-02-03T23:23:09.872521"
+      },
+      {
+        "turn_number": 2,
+        "role": "patient",
+        "content": "No, he doesn't have a fever or any chest discomfort. He did mention it feeling a bit warm though. As far as we can tell, there was no injury \u2013 it just appeared out of nowhere. He was just standing there working on the bookshelf when he felt a sting and noticed the bump. It's not red or anything, just kind of there.",
+        "timestamp": "2026-02-03T23:23:13.579063"
+      },
+      {
+        "turn_number": 3,
+        "role": "physician",
+        "content": "Thank you for the additional information. Is your husband currently on any medications, specifically blood thinners? Has he noticed any changes in the color or temperature of the skin around the bump since it first appeared? Lastly, has he experienced any similar episodes in the past?",
+        "timestamp": "2026-02-03T23:23:15.055975"
+      },
+      {
+        "turn_number": 4,
+        "role": "patient",
+        "content": "Yes, he is on a blood thinner, Plavix I think it's called, for his heart. The skin around the bump isn't a different color, but it does feel a bit warmer than the rest of his skin. He's never had anything like this happen before, which is why it worried us so much.",
+        "timestamp": "2026-02-03T23:23:17.884564"
+      },
+      {
+        "turn_number": 5,
+        "role": "physician",
+        "content": "Given your husband's history and current medication, the sudden appearance of a warm bump could be due to a hematoma, which is a collection of blood outside of a blood vessel, possibly caused by his blood thinner, Plavix. It could also be an insect bite or an allergic reaction.\n\nHere's what I suggest:\n1. Apply a cold compress to the area for 15 minutes every hour to reduce swelling.\n2. Monitor the bump for any changes in size, color, or warmth.\n3. Contact his primary care physician to discuss the situation and potentially adjust his Plavix dosage.\n\nHowever, if he develops severe pain, the bump rapidly increases in size, or he experiences symptoms like shortness of breath, chest pain, or leg weakness, he should seek immediate medical attention as these could indicate a more serious condition.",
+        "timestamp": "2026-02-03T23:23:22.501956"
+      }
+    ]
+  },
+  {
+    "conversation_id": "hcm_0b9cd12a4805_gpt-4_6t",
+    "scenario_id": "hcm_0b9cd12a4805",
+    "generator_model": "gpt-4",
+    "patient_simulator": "gpt-4",
+    "total_turns": 6,
+    "generation_params": {
+      "physician_temperature": 0.3,
+      "patient_temperature": 0.8,
+      "max_tokens_per_turn": 350,
+      "num_turns": 6
+    },
+    "created_at": "2026-02-03T23:23:37.223449",
+    "turns": [
+      {
+        "turn_number": 0,
+        "role": "patient",
+        "content": "hi my nine year old son had a cough and flu symptons three months ago and the chesty sounding cough and green phlegm still remains. it did seem to get better but never totally went and has now picked up again...he has only ever had antibiotics once in his live which suggests he his generally fitand well and active...never short of breath or weezy...so why would this be....",
+        "timestamp": "2026-02-03T23:23:22.502221"
+      },
+      {
+        "turn_number": 1,
+        "role": "physician",
+        "content": "I'm sorry to hear that your son is having these ongoing symptoms. To better understand his condition, could you please tell me if he has any known allergies or exposure to secondhand smoke? Also, does he have any associated symptoms like fever, weight loss, or night sweats? Lastly, has he been in contact with anyone who has tuberculosis or other serious respiratory infections?",
+        "timestamp": "2026-02-03T23:23:24.646675"
+      },
+      {
+        "turn_number": 2,
+        "role": "patient",
+        "content": "Well, he doesn't have any known allergies, and we're a smoke-free home, so no exposure there. He hasn't had a fever, and as far as I can tell, there's been no weight loss or night sweats. As for being in contact with anyone who has tuberculosis or something similar, I'm not certain. He's back in school now, so he's around a lot of other kids. I'm not aware of any cases, but you know how it is with kids and germs...they're little germ magnets.",
+        "timestamp": "2026-02-03T23:23:28.040912"
+      },
+      {
+        "turn_number": 3,
+        "role": "physician",
+        "content": "Thank you for the additional information. It's reassuring that he doesn't have any alarming symptoms like fever, weight loss, or night sweats. However, the persistence of his cough and green phlegm is concerning. Has there been any change in his activity level or appetite? Does he have any pain or discomfort in his chest? Lastly, have you noticed any changes in his voice or a persistent sore throat?",
+        "timestamp": "2026-02-03T23:23:29.908035"
+      },
+      {
+        "turn_number": 4,
+        "role": "patient",
+        "content": "No, he's as active as usual, always up and running around. Appetite is good too. He doesn't complain about any chest pain and his voice seems normal to me. He does say his throat is a bit sore sometimes, but I assumed that was because of the coughing. Is this something to be worried about, doctor?",
+        "timestamp": "2026-02-03T23:23:33.301872"
+      },
+      {
+        "turn_number": 5,
+        "role": "physician",
+        "content": "It's good to hear that his activity level and appetite are normal, and there's no chest pain or voice changes. The sore throat could indeed be due to the coughing. At this point, the leading possibilities include a post-viral cough, which can linger after a respiratory infection, or possibly a bacterial infection that may require antibiotics.\n\nHere's our plan:\n1. Monitor his symptoms for another week.\n2. If the cough or phlegm worsens, or if he develops a fever, please seek immediate medical attention.\n3. If there's no improvement after a week, it would be best to schedule a follow-up appointment for further evaluation, which may include a chest X-ray or throat swab.\n\nRemember, if he develops difficulty breathing, high fever, or severe chest pain, seek immediate medical attention.",
+        "timestamp": "2026-02-03T23:23:37.223396"
+      }
+    ]
+  },
+  {
+    "conversation_id": "hcm_7993ed7ee08c_gpt-4_6t",
+    "scenario_id": "hcm_7993ed7ee08c",
+    "generator_model": "gpt-4",
+    "patient_simulator": "gpt-4",
+    "total_turns": 6,
+    "generation_params": {
+      "physician_temperature": 0.3,
+      "patient_temperature": 0.8,
+      "max_tokens_per_turn": 350,
+      "num_turns": 6
+    },
+    "created_at": "2026-02-03T23:23:49.320397",
+    "turns": [
+      {
+        "turn_number": 0,
+        "role": "patient",
+        "content": "gyno problemsfor the past few months, I have been having issues with my vagina. there always seems to be something wrong with me. its either an infection or a yeast infection from the medication used to treat the previous infection or a herpes outbreak as a result of a yeast infection. most recently, I had a uti. I was treated for that and everything seemed fine, until after I finished the medication. it still hurt when I had sex and still is uncomfortable to pee. I dont know whats going on and this has been going on for months.",
+        "timestamp": "2026-02-03T23:23:37.223777"
+      },
+      {
+        "turn_number": 1,
+        "role": "physician",
+        "content": "I'm sorry to hear you're experiencing these symptoms. To better understand, could you please tell me more about the pain during sex and urination - is it a burning sensation or more of a sharp pain? Also, did you notice any change in the color or smell of your urine? Lastly, have you had any fever, lower abdominal pain, or back pain recently?",
+        "timestamp": "2026-02-03T23:23:39.390774"
+      },
+      {
+        "turn_number": 2,
+        "role": "patient",
+        "content": "The pain during sex and urination is more like a burning sensation. I haven't really noticed a change in the color of my urine but sometimes, there's this unusual smell. It's quite embarrassing to admit. As for fever, I can't really say I've had any but I do feel a bit of discomfort in my lower abdomen from time to time. I just thought it was typical menstrual cramps or something.",
+        "timestamp": "2026-02-03T23:23:41.804723"
+      },
+      {
+        "turn_number": 3,
+        "role": "physician",
+        "content": "Thank you for sharing those details. The burning sensation during sex and urination, unusual smell, and intermittent lower abdominal discomfort could suggest a persistent or recurrent urinary tract infection (UTI) or a sexually transmitted infection (STI). Have you been tested for STIs recently? Also, are you currently using any form of contraception? Lastly, have you noticed any unusual vaginal discharge?",
+        "timestamp": "2026-02-03T23:23:44.116758"
+      },
+      {
+        "turn_number": 4,
+        "role": "patient",
+        "content": "Well, I haven't been tested for STIs recently. I'm currently using birth control pills as my form of contraception. As for the discharge, I've noticed it's a bit thicker and whiter than usual, but I thought it was from the yeast infection medications.",
+        "timestamp": "2026-02-03T23:23:46.251801"
+      },
+      {
+        "turn_number": 5,
+        "role": "physician",
+        "content": "Your symptoms, including the burning sensation, unusual smell, and changes in discharge, could indicate a few possibilities such as a recurrent UTI, a yeast infection not fully cleared, or an STI. It's important to get tested for STIs to rule this out. Also, consider scheduling a follow-up appointment with your gynecologist to reassess your symptoms. In the meantime, stay hydrated and avoid sexual intercourse until you've been evaluated. If you develop fever, severe abdominal pain, or back pain, seek immediate medical attention as these could indicate a more serious condition.",
+        "timestamp": "2026-02-03T23:23:49.320385"
+      }
+    ]
+  },
+  {
+    "conversation_id": "hcm_29d839ba923e_gpt-4_6t",
+    "scenario_id": "hcm_29d839ba923e",
+    "generator_model": "gpt-4",
+    "patient_simulator": "gpt-4",
+    "total_turns": 6,
+    "generation_params": {
+      "physician_temperature": 0.3,
+      "patient_temperature": 0.8,
+      "max_tokens_per_turn": 350,
+      "num_turns": 6
+    },
+    "created_at": "2026-02-03T23:24:01.069761",
+    "turns": [
+      {
+        "turn_number": 0,
+        "role": "patient",
+        "content": "I have found that I have an allergy to leotensin. They have taken me off of everything....I found in the information that one side effect if the red skin lensions with a purple center. I was looking to see if there was anything I could do to help the spots go away. I am a dental hygienist and I will be working the next two days. Is there anything that would cover them, so the patients would not be aware???",
+        "timestamp": "2026-02-03T23:23:49.320535"
+      },
+      {
+        "turn_number": 1,
+        "role": "physician",
+        "content": "I understand your concern about the skin lesions. To better assist you, I need a bit more information. When did these lesions first appear? Are they painful or itchy? Have you noticed any other symptoms like fever or joint pain?",
+        "timestamp": "2026-02-03T23:23:51.063015"
+      },
+      {
+        "turn_number": 2,
+        "role": "patient",
+        "content": "I noticed the spots about three days ago. They're not really painful but they do itch from time to time. No fever or joint pain, thankfully. I just want to make sure they're not visible or uncomfortable while I'm working.",
+        "timestamp": "2026-02-03T23:23:52.832579"
+      },
+      {
+        "turn_number": 3,
+        "role": "physician",
+        "content": "Thank you for the additional information. It's reassuring that you don't have any systemic symptoms like fever or joint pain. The lesions you described could be a manifestation of a drug reaction. To manage them, you could consider using a topical steroid cream for the itchiness and a concealer for the visibility. However, it's important to get these lesions evaluated in person. Can you arrange to see a dermatologist soon? Also, have you noticed any changes in the lesions since they first appeared?",
+        "timestamp": "2026-02-03T23:23:56.698099"
+      },
+      {
+        "turn_number": 4,
+        "role": "patient",
+        "content": "Thanks for the advice. I'll definitely look into getting a topical steroid cream and some concealer. About the lesions, they haven't changed much over the past few days, they're still red with a purple center. I'll try to schedule an appointment with a dermatologist, but my work schedule is pretty packed. Is it urgent to get them checked out or can it wait till my next off day?",
+        "timestamp": "2026-02-03T23:23:58.847428"
+      },
+      {
+        "turn_number": 5,
+        "role": "physician",
+        "content": "While it's important to get these lesions evaluated, if they're not changing rapidly, not painful, and you have no other symptoms, it's reasonable to wait until your next off day. However, if they start to spread, become painful, or you develop other symptoms like fever, seek immediate medical attention. In the meantime, monitor the lesions closely. Does that sound manageable?",
+        "timestamp": "2026-02-03T23:24:01.069725"
+      }
+    ]
+  },
+  {
+    "conversation_id": "hcm_7a7a407efa18_gpt-4_6t",
+    "scenario_id": "hcm_7a7a407efa18",
+    "generator_model": "gpt-4",
+    "patient_simulator": "gpt-4",
+    "total_turns": 6,
+    "generation_params": {
+      "physician_temperature": 0.3,
+      "patient_temperature": 0.8,
+      "max_tokens_per_turn": 350,
+      "num_turns": 6
+    },
+    "created_at": "2026-02-03T23:24:20.349689",
+    "turns": [
+      {
+        "turn_number": 0,
+        "role": "patient",
+        "content": "Hi my name is Wendy I ve been having an issue for the last couple of months or so I been having severe pain in my lower back around the front into the groin area and its radiating down my thigh and so on I am currently a cancer patient nobody seems to be able to tell me what it could be the pain is so bad that it brings tears to my eyes would you possibly know what it could be or might be",
+        "timestamp": "2026-02-03T23:24:01.070177"
+      },
+      {
+        "turn_number": 1,
+        "role": "physician",
+        "content": "I'm sorry to hear you're experiencing such discomfort, Wendy. To help me understand your situation better, could you please tell me:\n1. What type of cancer you have and what treatments you're currently undergoing?\n2. Whether the pain is constant or intermittent, and if anything makes it better or worse?\n3. If you've noticed any changes in your bladder or bowel function, or any numbness or weakness in your legs?",
+        "timestamp": "2026-02-03T23:24:06.117624"
+      },
+      {
+        "turn_number": 2,
+        "role": "patient",
+        "content": "Well, I have been diagnosed with breast cancer about two years ago, and I'm currently on tamoxifen. As for the pain, it's pretty constant and it seems to get worse when I'm standing or walking for long periods. I haven't noticed any changes in my bladder or bowel function, but there is a kind of tingling sensation in my leg sometimes. It's all so hard to understand.",
+        "timestamp": "2026-02-03T23:24:08.471220"
+      },
+      {
+        "turn_number": 3,
+        "role": "physician",
+        "content": "I understand this is a difficult time for you, Wendy. Your symptoms could be related to a few different conditions. To narrow it down, could you please tell me:\n1. Is the tingling sensation in the same leg where you feel the pain?\n2. Have you had any recent imaging of your spine, such as an MRI or CT scan?\n3. Have you noticed any unexplained weight loss, night sweats, or fevers recently?",
+        "timestamp": "2026-02-03T23:24:13.285457"
+      },
+      {
+        "turn_number": 4,
+        "role": "patient",
+        "content": "Yes, the tingling is in the same leg where I feel the pain. No, I haven't had any recent imaging of my spine, just regular check-ups and mammograms for my breast cancer. I haven't noticed any weight loss or fever, but I've been having some night sweats lately. I just thought it was related to my medication or menopause.",
+        "timestamp": "2026-02-03T23:24:15.925553"
+      },
+      {
+        "turn_number": 5,
+        "role": "physician",
+        "content": "I appreciate your detailed responses, Wendy. Your symptoms may suggest a few possibilities, including sciatica (nerve pain often due to a herniated disc or spinal stenosis), metastasis to the spine, or side effects from Tamoxifen. Here's our plan:\n\n1. Discuss these symptoms with your oncologist immediately, as they need to be aware of any new or worsening symptoms.\n2. Request an urgent referral for spine imaging (MRI or CT scan) to rule out spinal metastasis.\n3. Consult with a neurologist or pain specialist for further evaluation and management of your symptoms.\n\nPlease seek immediate medical attention if you experience sudden worsening of pain, loss of bladder or bowel control, or increased weakness or numbness in your legs.",
+        "timestamp": "2026-02-03T23:24:20.349634"
+      }
+    ]
+  },
+  {
+    "conversation_id": "hcm_c948fe543892_gpt-4_6t",
+    "scenario_id": "hcm_c948fe543892",
+    "generator_model": "gpt-4",
+    "patient_simulator": "gpt-4",
+    "total_turns": 6,
+    "generation_params": {
+      "physician_temperature": 0.3,
+      "patient_temperature": 0.8,
+      "max_tokens_per_turn": 350,
+      "num_turns": 6
+    },
+    "created_at": "2026-02-03T23:24:38.286521",
+    "turns": [
+      {
+        "turn_number": 0,
+        "role": "patient",
+        "content": "hye, My aunt is having shortness of breath and she is on vent now. Her breast showed some kind of infection that apparently turned out to have black blisters. I could she those spreading. When we went for lungs x-ray doctor said she has accumulation of water in her lungs",
+        "timestamp": "2026-02-03T23:24:20.349990"
+      },
+      {
+        "turn_number": 1,
+        "role": "physician",
+        "content": "I'm sorry to hear about your aunt's condition. To better understand her situation, could you please tell me when her shortness of breath started and how rapidly it worsened? Also, when did the black blisters on her breast first appear and have they been biopsied? Lastly, has she been diagnosed with any chronic conditions or is she on any medications?",
+        "timestamp": "2026-02-03T23:24:24.037617"
+      },
+      {
+        "turn_number": 2,
+        "role": "patient",
+        "content": "She started feeling shortness of breath about two weeks ago. It seemed to get really bad quickly, so we put her on the vent. The black blisters showed up around the same time, I think, but no, they haven't been biopsied. She has been battling diabetes for years and she takes medication for that. We've been giving her antibiotics, but they don't seem to be helping.",
+        "timestamp": "2026-02-03T23:24:27.634814"
+      },
+      {
+        "turn_number": 3,
+        "role": "physician",
+        "content": "Thank you for the information. It's concerning that her shortness of breath worsened quickly and that she has these unexplained black blisters. Given her diabetes, she may be at higher risk for certain infections. Has she had any fever or chills? Also, has the water in her lungs been addressed or treated in any way? Lastly, could you please specify the antibiotics she's currently taking?",
+        "timestamp": "2026-02-03T23:24:30.702464"
+      },
+      {
+        "turn_number": 4,
+        "role": "patient",
+        "content": "She's been having fevers on and off, yeah. The doctors did mention that the water in her lungs is a concern, but I'm not sure what they're gonna do about it yet. As for the antibiotics, she's taking amoxicillin.",
+        "timestamp": "2026-02-03T23:24:32.758745"
+      },
+      {
+        "turn_number": 5,
+        "role": "physician",
+        "content": "I appreciate the additional details. The combination of rapid respiratory deterioration, skin changes, and fever, especially in a diabetic patient, raises concern for severe infections like necrotizing fasciitis or sepsis. It's crucial to ensure she's on the right antibiotics.\n\nHere's a plan:\n1. Discuss with her doctors about the possibility of these severe infections and if a biopsy of the skin lesions is needed.\n2. Ask about a plan to address the fluid in her lungs - it may need to be drained and tested.\n3. Ensure her blood sugars are well-controlled as high levels can worsen infections.\n\nPlease seek emergency care if she becomes more confused, has a high fever, or if her breathing worsens.",
+        "timestamp": "2026-02-03T23:24:38.286499"
+      }
+    ]
+  },
+  {
+    "conversation_id": "hcm_db150981dba1_gpt-4_6t",
+    "scenario_id": "hcm_db150981dba1",
+    "generator_model": "gpt-4",
+    "patient_simulator": "gpt-4",
+    "total_turns": 6,
+    "generation_params": {
+      "physician_temperature": 0.3,
+      "patient_temperature": 0.8,
+      "max_tokens_per_turn": 350,
+      "num_turns": 6
+    },
+    "created_at": "2026-02-03T23:24:59.034976",
+    "turns": [
+      {
+        "turn_number": 0,
+        "role": "patient",
+        "content": "i am 28 yrs old, i got married before 6 year, i was infected by pulmonary tuberculosis before 6 years, i took treatment for 6 months after that i statred gainig weigt, my periods was irredulat, i increased nearlt 20 kgs after that, now my weight is 75 kgs, i trying to conceive, i took tsh, other blood test too, but everything is normal, do i have the chances to conceive",
+        "timestamp": "2026-02-03T23:24:38.286786"
+      },
+      {
+        "turn_number": 1,
+        "role": "physician",
+        "content": "I understand your concerns about conceiving. To help me understand your situation better, could you please tell me:\n1. How irregular are your periods (how many days between each cycle)?\n2. Have you had any other symptoms such as excessive hair growth or acne?\n3. Have you had any imaging studies done, like an ultrasound of your ovaries?",
+        "timestamp": "2026-02-03T23:24:41.223394"
+      },
+      {
+        "turn_number": 2,
+        "role": "patient",
+        "content": "My periods are pretty erratic. Sometimes they come every 40 days, sometimes it takes 60 days or even longer. As for other symptoms, I haven't really noticed any excessive hair growth or acne. And no, I haven't had any ultrasounds or any imaging studies done. Should I have that done?",
+        "timestamp": "2026-02-03T23:24:44.152913"
+      },
+      {
+        "turn_number": 3,
+        "role": "physician",
+        "content": "Your irregular periods and weight gain could suggest a condition called Polycystic Ovary Syndrome (PCOS), which can affect fertility. However, we need more information to confirm this. Here's what I recommend:\n\n1. Schedule an appointment with your doctor for an ultrasound of your ovaries to check for cysts, a common sign of PCOS.\n2. Consider seeing a dietitian to help manage your weight, as weight loss can improve fertility in women with PCOS.\n3. Start tracking your menstrual cycles and any other symptoms.\n\nIf your periods become very heavy, very painful, or stop entirely, please seek immediate medical attention.",
+        "timestamp": "2026-02-03T23:24:48.899826"
+      },
+      {
+        "turn_number": 4,
+        "role": "patient",
+        "content": "Oh, I see... I didn't know about this Polycystic Ovary Syndrome. I will schedule an ultrasound then. And about the dietitian, I guess it's a good idea, I really want to lose this weight. I'll also start tracking my periods more diligently. It's just a bit scary, you know, this uncertainty about my health and my dream of having a child. But thank you for your advice, I appreciate it.",
+        "timestamp": "2026-02-03T23:24:54.141808"
+      },
+      {
+        "turn_number": 5,
+        "role": "physician",
+        "content": "I understand your concerns and it's completely normal to feel this way. Remember, many women with PCOS successfully conceive, so there's every reason to stay hopeful. In addition to the steps we've discussed, it's also important to:\n\n1. Continue regular sexual intercourse, ideally every 2-3 days throughout your cycle.\n2. Consider starting prenatal vitamins, as they can help prepare your body for pregnancy.\n3. Keep all your medical appointments and follow your healthcare team's advice closely.\n\nIf you notice any severe abdominal pain, heavy vaginal bleeding, or if you have any other concerns, seek immediate medical attention.",
+        "timestamp": "2026-02-03T23:24:59.034943"
+      }
+    ]
+  },
+  {
+    "conversation_id": "hcm_047dac4ff1ef_gpt-4_6t",
+    "scenario_id": "hcm_047dac4ff1ef",
+    "generator_model": "gpt-4",
+    "patient_simulator": "gpt-4",
+    "total_turns": 6,
+    "generation_params": {
+      "physician_temperature": 0.3,
+      "patient_temperature": 0.8,
+      "max_tokens_per_turn": 350,
+      "num_turns": 6
+    },
+    "created_at": "2026-02-03T23:25:13.495541",
+    "turns": [
+      {
+        "turn_number": 0,
+        "role": "patient",
+        "content": "I sprained my foot on Friday. I stepped on what I thought was lawn. Instead I was a bit on the lawn, but the outside of my foot snapped down into a trough. My foot has been swollen since Friday. Today is Thursday. Kept ice on it for 24 hours. Bruising started after that, Now bruising is spreading. It is really dark on my toes. Pain is on outside of my foot, not on my ankle.",
+        "timestamp": "2026-02-03T23:24:59.035278"
+      },
+      {
+        "turn_number": 1,
+        "role": "physician",
+        "content": "I'm sorry to hear about your foot. To better understand your situation, could you please tell me:\n1. How severe is your pain on a scale of 1-10?\n2. Are you able to bear weight or walk on the affected foot?\n3. Have you noticed any changes in the temperature of your foot or toes, or any numbness or tingling?",
+        "timestamp": "2026-02-03T23:25:01.630834"
+      },
+      {
+        "turn_number": 2,
+        "role": "patient",
+        "content": "The pain I'd say is around a 7 or 8, especially when I put pressure on it. I've been mostly trying to keep my weight off of it, but when I do try to walk, it's really painful. As for temperature, I think it might be a bit warmer than my other foot? I'm not sure, though. And no, I haven't felt any numbness or tingling.",
+        "timestamp": "2026-02-03T23:25:04.280675"
+      },
+      {
+        "turn_number": 3,
+        "role": "physician",
+        "content": "Thank you for the information. Given the severity of your pain, the inability to bear weight, and the ongoing swelling and bruising, I'm concerned about a potential fracture. I recommend you seek urgent medical attention. They may need to perform an X-ray to rule out a fracture. If the pain increases, you can't move your toes, or your foot becomes pale, cold, or numb, go to the emergency department immediately.",
+        "timestamp": "2026-02-03T23:25:07.047768"
+      },
+      {
+        "turn_number": 4,
+        "role": "patient",
+        "content": "Oh, goodness... a possible fracture? That sounds serious. I was hoping it was just a sprain. I will definitely get it checked out then. Is there anything I can do in the meantime to help with the pain? It's really uncomfortable.",
+        "timestamp": "2026-02-03T23:25:10.141911"
+      },
+      {
+        "turn_number": 5,
+        "role": "physician",
+        "content": "Yes, it's important to manage your pain and comfort while you seek further medical attention. You can continue to ice your foot for 20 minutes every 2-3 hours, elevate it above the level of your heart when possible, and take over-the-counter pain relievers like ibuprofen or acetaminophen, unless you have a medical reason not to. Remember, these steps are temporary measures until you can get an X-ray. If your symptoms worsen, go to the emergency department immediately.",
+        "timestamp": "2026-02-03T23:25:13.495520"
+      }
+    ]
+  },
+  {
+    "conversation_id": "hcm_7eb0ee57b780_gpt-4_6t",
+    "scenario_id": "hcm_7eb0ee57b780",
+    "generator_model": "gpt-4",
+    "patient_simulator": "gpt-4",
+    "total_turns": 6,
+    "generation_params": {
+      "physician_temperature": 0.3,
+      "patient_temperature": 0.8,
+      "max_tokens_per_turn": 350,
+      "num_turns": 6
+    },
+    "created_at": "2026-02-03T23:25:35.305017",
+    "turns": [
+      {
+        "turn_number": 0,
+        "role": "patient",
+        "content": "hi, i have been recently diagnosed with H pylori.. i have been give the triple treatment of calithramycin, amoxxicilin and omeprazole.. is dis something very serious and does this have some long term implications etc.can u plz give some detailed information about Hpylori. thnx",
+        "timestamp": "2026-02-03T23:25:13.495741"
+      },
+      {
+        "turn_number": 1,
+        "role": "physician",
+        "content": "H. pylori is a common bacteria that can cause peptic ulcers and, in rare cases, stomach cancer. However, the triple therapy you're on is typically very effective at eradicating it.\n\n1. Have you started your treatment yet, and if so, have you noticed any side effects?\n2. Have you been diagnosed with any ulcers or gastritis?\n3. Do you have any family history of stomach cancer?",
+        "timestamp": "2026-02-03T23:25:18.102501"
+      },
+      {
+        "turn_number": 2,
+        "role": "patient",
+        "content": "Yes, I've started the treatment, and I've been feeling a bit nauseous. I've also noticed a change in my taste. I was diagnosed with a peptic ulcer, that's how they found the H pylori. And no, I don't have any family history of stomach cancer. This whole thing has me quite worried, to be honest.",
+        "timestamp": "2026-02-03T23:25:22.507884"
+      },
+      {
+        "turn_number": 3,
+        "role": "physician",
+        "content": "I understand your concerns. The nausea and change in taste can be side effects of your treatment, but they should resolve once you finish it. The good news is that your peptic ulcer should heal with the eradication of H. pylori.\n\n1. How severe is your nausea?\n2. Have you noticed any black or bloody stools, which could indicate a bleeding ulcer?\n3. Are you taking any medications for pain relief, such as NSAIDs, which can worsen ulcers?",
+        "timestamp": "2026-02-03T23:25:25.682117"
+      },
+      {
+        "turn_number": 4,
+        "role": "patient",
+        "content": "The nausea isn't too severe, it's just uncomfortable and kind of constant. I haven't noticed any black or bloody stools, thank goodness. For pain, I've been taking ibuprofen. Is that bad? I didn't know it could worsen ulcers.",
+        "timestamp": "2026-02-03T23:25:28.929797"
+      },
+      {
+        "turn_number": 5,
+        "role": "physician",
+        "content": "Ibuprofen is a type of NSAID, which can indeed worsen ulcers by irritating the stomach lining. I'd recommend stopping the ibuprofen and switching to a medication like acetaminophen for pain relief.\n\n1. Are you experiencing any severe abdominal pain or vomiting?\n2. Have you been able to eat and drink normally despite the nausea?\n3. Are you taking the ibuprofen for ulcer-related pain, or for something else?\n\nRemember, if your symptoms worsen or you notice black or bloody stools, seek emergency care immediately.",
+        "timestamp": "2026-02-03T23:25:35.305006"
+      }
+    ]
+  },
+  {
+    "conversation_id": "hcm_49c1d0ccca9c_gpt-4_6t",
+    "scenario_id": "hcm_49c1d0ccca9c",
+    "generator_model": "gpt-4",
+    "patient_simulator": "gpt-4",
+    "total_turns": 6,
+    "generation_params": {
+      "physician_temperature": 0.3,
+      "patient_temperature": 0.8,
+      "max_tokens_per_turn": 350,
+      "num_turns": 6
+    },
+    "created_at": "2026-02-03T23:25:56.094854",
+    "turns": [
+      {
+        "turn_number": 0,
+        "role": "patient",
+        "content": "I had a alt reading about 2+ months ago of 43 then retested today and got a 60 alt reading my other readings came back normal should I be concerned?Im 40 years 5ft 3 and weigh 192albs have a history of chronic vertigo and insomnia, and chronic sinus problems. I take valium 5 mg 4 times a day, fluticansone 2 puffs each nose once a day, qvair two puffs twice a day to prevent weasing, claritin for allergies, and I do sinus rinses as needed. I am female.My doctor says none of the medicine has liver side effects, and I dont drink alcohol but a sip on the rare occasion. He thinks it could be do my weight and Im working on this with gradual exercise when Im able too. Should I be worried with this test result? I had one other result that was high my triglcyerides read 198 ? WWW.WWWW.WW",
+        "timestamp": "2026-02-03T23:25:35.305144"
+      },
+      {
+        "turn_number": 1,
+        "role": "physician",
+        "content": "Your ALT (Alanine Aminotransferase) level is slightly elevated, which can sometimes be a sign of liver inflammation. However, it's important to note that many factors can cause a mild increase, including obesity and high triglycerides. Since your doctor mentioned that none of your medications are known to affect the liver and you rarely drink alcohol, your weight could indeed be a contributing factor.\n\n1. Have you noticed any symptoms like yellowing of the skin or eyes, abdominal pain, or unusually dark urine?\n2. Are you experiencing any new or worsening symptoms related to your chronic conditions?\n3. Have there been any changes in your diet or exercise routine since your last ALT test?",
+        "timestamp": "2026-02-03T23:25:40.017020"
+      },
+      {
+        "turn_number": 2,
+        "role": "patient",
+        "content": "No, I haven't noticed any yellowing of the skin or eyes, no abdominal pain, and my urine seems normal. As for my chronic conditions, they are pretty much the same, with occasional vertigo and sinus problems but nothing new or worse. I have been trying to exercise a bit more since my last ALT test. It's just a bit difficult with the vertigo but I'm managing. I've also been making an effort to eat healthier.",
+        "timestamp": "2026-02-03T23:25:44.136371"
+      },
+      {
+        "turn_number": 3,
+        "role": "physician",
+        "content": "It's good to hear that you're not experiencing any new symptoms and are making efforts to improve your lifestyle. The slight elevation in your ALT levels, while not ideal, is not necessarily alarming, especially given your lack of symptoms and the fact that it can be influenced by weight and high triglycerides.\n\n1. Have you noticed any changes in your weight since you started exercising and eating healthier?\n2. Are you taking any over-the-counter medications or supplements that you haven't mentioned?\n3. How often are you able to exercise and what type of exercise are you doing?",
+        "timestamp": "2026-02-03T23:25:49.541747"
+      },
+      {
+        "turn_number": 4,
+        "role": "patient",
+        "content": "Well, I haven't noticed any significant changes in my weight yet. It's a bit disheartening, but I understand these things take time. I'm not taking any over-the-counter medications or supplements. As for the exercise, I try to go on a gentle walk for 20 minutes or so, about 4 or 5 times a week. It's nothing vigorous, but I figured it's better than nothing.",
+        "timestamp": "2026-02-03T23:25:52.112072"
+      },
+      {
+        "turn_number": 5,
+        "role": "physician",
+        "content": "It's great that you're making an effort to exercise regularly and eat healthier. These changes can indeed take time to reflect in your weight, but they're beneficial for your overall health. The mild elevation in your ALT levels could be due to non-alcoholic fatty liver disease, which is often associated with obesity and high triglycerides.\n\nHere's our plan:\n1. Continue with your exercise and healthy eating habits.\n2. Retest your ALT and triglycerides in about 3 months to monitor any changes.\n3. Consider consulting a dietitian to help optimize your diet for weight loss and triglyceride control.\n\nPlease seek immediate medical attention if you experience severe abdominal pain, yellowing of the skin or eyes, or dark urine. These could be signs of a more serious liver issue.",
+        "timestamp": "2026-02-03T23:25:56.094817"
+      }
+    ]
+  },
+  {
+    "conversation_id": "hcm_716ac8145e1f_gpt-4_6t",
+    "scenario_id": "hcm_716ac8145e1f",
+    "generator_model": "gpt-4",
+    "patient_simulator": "gpt-4",
+    "total_turns": 6,
+    "generation_params": {
+      "physician_temperature": 0.3,
+      "patient_temperature": 0.8,
+      "max_tokens_per_turn": 350,
+      "num_turns": 6
+    },
+    "created_at": "2026-02-03T23:26:11.248962",
+    "turns": [
+      {
+        "turn_number": 0,
+        "role": "patient",
+        "content": "i had surgery done 5 months ago for scar tissue and adhesion removal. my gynecologist just found a cyst on my right ovary. im still having problems, when my husband and i have sex i get severe cervical pain and afterward i get abdominal cramps severe enough i get light headed, also i get abdominal pain and rectal pain before and during a bowel movement, i also get abdominal pain during urination. im 26 years old. what could it be?",
+        "timestamp": "2026-02-03T23:25:56.095272"
+      },
+      {
+        "turn_number": 1,
+        "role": "physician",
+        "content": "I'm sorry to hear you're experiencing these symptoms. To help me understand better, could you please tell me if you've noticed any changes in your menstrual cycle or any unusual vaginal discharge? Also, have you noticed any blood in your stool or urine? Lastly, have you had any recent weight changes?",
+        "timestamp": "2026-02-03T23:25:57.727071"
+      },
+      {
+        "turn_number": 2,
+        "role": "patient",
+        "content": "Well, my periods have been a bit irregular since the surgery, sometimes they're really heavy and sometimes they barely come at all. As for vaginal discharge, I've noticed that it's been a bit more than usual and it has a strange smell to it. I haven't noticed any blood in my stool or urine. And no, no significant weight changes recently.",
+        "timestamp": "2026-02-03T23:25:59.577606"
+      },
+      {
+        "turn_number": 3,
+        "role": "physician",
+        "content": "Thank you for the additional information. The irregular periods, increased and foul-smelling vaginal discharge, along with your pain symptoms, could indicate a few different conditions, such as pelvic inflammatory disease or an ovarian cyst complication. It's also possible that adhesions have reformed after your surgery. To help further narrow down the possibilities, do you have any fever or chills? Have you noticed any changes in your bowel or bladder habits, such as constipation, diarrhea, or increased frequency of urination? Lastly, have you had any imaging done since your surgery, like an ultrasound or CT scan?",
+        "timestamp": "2026-02-03T23:26:03.677562"
+      },
+      {
+        "turn_number": 4,
+        "role": "patient",
+        "content": "I haven't had any fever or chills, no. As for bowel movements, yes, I've had a bit of constipation lately. I have been going to the bathroom to urinate more often, but I thought that was just because I've been trying to drink more water. And no, I haven't had any imaging done since the surgery.",
+        "timestamp": "2026-02-03T23:26:06.743438"
+      },
+      {
+        "turn_number": 5,
+        "role": "physician",
+        "content": "Given your symptoms and history, the leading possibilities include a complication from the ovarian cyst, recurrent adhesions, or an infection such as pelvic inflammatory disease. It's also possible that the constipation and increased urination are contributing to your abdominal and rectal pain.\n\nHere's our plan:\n1. Schedule an imaging study, such as an ultrasound or CT scan, to evaluate the ovarian cyst and look for any new adhesions.\n2. Consider a pelvic exam and tests to rule out infection, given the changes in your vaginal discharge.\n3. Manage constipation with increased fiber intake, hydration, and possibly a stool softener if needed.\n\nPlease seek immediate medical attention if you experience severe pain, fever, vomiting, or if your symptoms significantly worsen.",
+        "timestamp": "2026-02-03T23:26:11.248945"
+      }
+    ]
+  },
+  {
+    "conversation_id": "hcm_308fba6d1f6f_gpt-4_6t",
+    "scenario_id": "hcm_308fba6d1f6f",
+    "generator_model": "gpt-4",
+    "patient_simulator": "gpt-4",
+    "total_turns": 6,
+    "generation_params": {
+      "physician_temperature": 0.3,
+      "patient_temperature": 0.8,
+      "max_tokens_per_turn": 350,
+      "num_turns": 6
+    },
+    "created_at": "2026-02-03T23:26:33.883995",
+    "turns": [
+      {
+        "turn_number": 0,
+        "role": "patient",
+        "content": "Hi, I had a subarachnoid bleed and coiling of brain aneurysm last year. I am having some major bilateral temple pain along with numbness that comes and goes in my left arm/hand/fingers. I have had headaches since the aneurysm, but this is different. Also, my moods have been horrible for the past few weeks.",
+        "timestamp": "2026-02-03T23:26:11.249143"
+      },
+      {
+        "turn_number": 1,
+        "role": "physician",
+        "content": "I'm sorry to hear you're feeling this way. To better understand your symptoms, could you please tell me:\n1. How long have you been experiencing this new type of headache and numbness in your left arm/hand/fingers?\n2. How would you describe the severity of the pain on a scale of 1-10, with 10 being the worst pain imaginable?\n3. Have you noticed any triggers or anything that makes the symptoms better or worse?",
+        "timestamp": "2026-02-03T23:26:14.833459"
+      },
+      {
+        "turn_number": 2,
+        "role": "patient",
+        "content": "The new type of headache started about two weeks ago. The numbness in my left arm has been going on for about a week. As for the severity, I'd say the headaches are around an 8 and the numbness, it's hard to say because it comes and goes. I haven't noticed any specific triggers, but stress seems to make it worse.",
+        "timestamp": "2026-02-03T23:26:17.188643"
+      },
+      {
+        "turn_number": 3,
+        "role": "physician",
+        "content": "Thank you for the additional information. Given your history of a subarachnoid bleed and brain aneurysm, it's important to take these new symptoms seriously.\n\n1. Have you had any other new symptoms such as vision changes, difficulty speaking, or weakness on one side of your body?\n2. Have you noticed any pattern to the numbness, like it happening more often at certain times of day or after certain activities?\n3. Have the mood changes been associated with any particular thoughts, or do they seem to come out of nowhere?\n\nPlease seek immediate medical attention if your symptoms worsen or if you experience sudden severe headache, loss of consciousness, or new neurological symptoms.",
+        "timestamp": "2026-02-03T23:26:24.168821"
+      },
+      {
+        "turn_number": 4,
+        "role": "patient",
+        "content": "I haven't really had vision changes, but I've been stumbling over my words a bit lately. I thought it might just be because I'm not getting enough sleep. The numbness, I haven't seen any clear pattern, it just comes out of nowhere. As for the mood swings, I can't put my finger on it. It's as though I'm irritated for no reason at all. But the headaches and numbness, they're really starting to worry me.",
+        "timestamp": "2026-02-03T23:26:27.292549"
+      },
+      {
+        "turn_number": 5,
+        "role": "physician",
+        "content": "I understand your concerns. Given your history and new symptoms, including headaches, numbness, and difficulty with speech, it's crucial to rule out serious conditions like a recurrent aneurysm or stroke.\n\n1. Have you noticed any changes in your ability to move, like difficulty lifting objects or weakness in your legs?\n2. Are you currently taking any medications for these symptoms or any other conditions?\n3. Have you been able to maintain your regular sleep schedule?\n\nI strongly recommend you seek immediate medical attention. These symptoms could indicate a serious condition that needs urgent evaluation. If your symptoms worsen or you experience sudden severe headache, loss of consciousness, or new neurological symptoms, call an ambulance immediately.",
+        "timestamp": "2026-02-03T23:26:33.883970"
+      }
+    ]
+  },
+  {
+    "conversation_id": "hcm_62e5768fcc1e_gpt-4_6t",
+    "scenario_id": "hcm_62e5768fcc1e",
+    "generator_model": "gpt-4",
+    "patient_simulator": "gpt-4",
+    "total_turns": 6,
+    "generation_params": {
+      "physician_temperature": 0.3,
+      "patient_temperature": 0.8,
+      "max_tokens_per_turn": 350,
+      "num_turns": 6
+    },
+    "created_at": "2026-02-03T23:26:50.807850",
+    "turns": [
+      {
+        "turn_number": 0,
+        "role": "patient",
+        "content": "Almost everytime I eat, it burns when I swallow. Not in my throat but in my chest. It burns all the way down. It helps a lil if I drink water after I swallow. I wake up a lot in the middle of the night with heartburn so I chew some tums and it helps for the most part. Why is it so painful when I eat?",
+        "timestamp": "2026-02-03T23:26:33.884287"
+      },
+      {
+        "turn_number": 1,
+        "role": "physician",
+        "content": "I'm sorry to hear you're experiencing this discomfort. To help me understand your symptoms better, could you please tell me how long you've been experiencing this burning sensation? Does it happen with all types of food or only certain ones? Have you noticed any other symptoms like weight loss, vomiting, or blood in your stool?",
+        "timestamp": "2026-02-03T23:26:36.337933"
+      },
+      {
+        "turn_number": 2,
+        "role": "patient",
+        "content": "Well, this started about three months ago. Now that you mention it, I notice it more when I eat spicy or really greasy food. And no, no weight loss or vomiting. I haven't seen any blood in my stool either.",
+        "timestamp": "2026-02-03T23:26:38.266425"
+      },
+      {
+        "turn_number": 3,
+        "role": "physician",
+        "content": "Thank you for the additional information. It's helpful to know that your symptoms have been ongoing for three months and seem to be triggered by certain types of food. Do you experience any relief with over-the-counter antacids, other than Tums? Have you ever been diagnosed with a gastrointestinal condition in the past? Lastly, do you smoke or consume alcohol regularly?",
+        "timestamp": "2026-02-03T23:26:40.332318"
+      },
+      {
+        "turn_number": 4,
+        "role": "patient",
+        "content": "Mostly just Tums, I haven't really tried anything else. I've never been diagnosed with anything related to my stomach or digestion before. And no, I don't smoke, but I do enjoy a glass of wine over dinner most nights.",
+        "timestamp": "2026-02-03T23:26:42.481963"
+      },
+      {
+        "turn_number": 5,
+        "role": "physician",
+        "content": "Your symptoms suggest you may be dealing with gastroesophageal reflux disease (GERD), a condition where stomach acid frequently flows back into the tube connecting your mouth and stomach, causing a burning sensation. This is often triggered by certain foods, such as spicy or greasy items.\n\nHere's a plan:\n1. Try an over-the-counter proton pump inhibitor (PPI) like omeprazole for 2 weeks. This reduces stomach acid and may help with your symptoms.\n2. Limit intake of spicy and greasy foods, and consider reducing alcohol consumption.\n3. Elevate the head of your bed or use a wedge pillow to prevent acid reflux during sleep.\n\nIf your symptoms persist or worsen, or if you experience difficulty swallowing, unexplained weight loss, or blood in your stool, seek immediate medical attention.",
+        "timestamp": "2026-02-03T23:26:50.807817"
+      }
+    ]
+  },
+  {
+    "conversation_id": "hcm_7a5e92335bdd_gpt-4_6t",
+    "scenario_id": "hcm_7a5e92335bdd",
+    "generator_model": "gpt-4",
+    "patient_simulator": "gpt-4",
+    "total_turns": 6,
+    "generation_params": {
+      "physician_temperature": 0.3,
+      "patient_temperature": 0.8,
+      "max_tokens_per_turn": 350,
+      "num_turns": 6
+    },
+    "created_at": "2026-02-03T23:27:07.641584",
+    "turns": [
+      {
+        "turn_number": 0,
+        "role": "patient",
+        "content": "for the pst  6 days  i have been haing  upper  abdome  distress ...  i have had gall bladder  surgery  2 yrs  ago ..in the past  2  yrs  when i get these bouts  .. i go to  emerg  they run cardiograms  xrays ,blood work ,all comes back normal  ...im stressing out  over this  as im  scared every time it happens  im having a heart  attack  wht is it  ?",
+        "timestamp": "2026-02-03T23:26:50.808245"
+      },
+      {
+        "turn_number": 1,
+        "role": "physician",
+        "content": "I understand your concern. To better understand your symptoms, can you describe the nature of your upper abdominal distress (e.g., sharp, dull, cramping)? Does anything make it better or worse, like certain foods or movements? Do you have any other symptoms during these episodes, such as nausea, vomiting, or changes in bowel movements?",
+        "timestamp": "2026-02-03T23:26:52.498018"
+      },
+      {
+        "turn_number": 2,
+        "role": "patient",
+        "content": "It's a kind of dull, gnawing ache, right up under my ribs. It's not really sharp like a stab, more like someone's squeezing something inside. Nothing I eat or do seems to make it any better or worse, it just sort of comes and goes. And yeah, I do feel a bit nauseous sometimes, but I haven't actually thrown up or anything. As for the bowel movements, I haven't noticed anything different, but I'll pay more attention now that you've mentioned it.",
+        "timestamp": "2026-02-03T23:26:55.803532"
+      },
+      {
+        "turn_number": 3,
+        "role": "physician",
+        "content": "Thank you for the additional details. It's helpful to know that the pain is a dull, gnawing ache and not influenced by food or movement. Given your history of gallbladder surgery, it's possible that you could be experiencing symptoms related to your digestive system. Have you noticed any changes in your appetite or weight recently? Do you experience any discomfort or pain after eating? Lastly, have you noticed any yellowing of your skin or eyes?",
+        "timestamp": "2026-02-03T23:26:58.640914"
+      },
+      {
+        "turn_number": 4,
+        "role": "patient",
+        "content": "No, I haven't really noticed any changes in my appetite or weight. I mean, I've lost a few pounds but I think that's more from the stress and worry than anything else. I don't really have pain after eating, it just seems to be there all the time, really. And no yellowing of the skin or eyes that I've noticed. I've been checking myself in the mirror just to be sure, because I've heard that could be a bad sign. It's all pretty confusing and worrying.",
+        "timestamp": "2026-02-03T23:27:01.549993"
+      },
+      {
+        "turn_number": 5,
+        "role": "physician",
+        "content": "I understand your concerns and appreciate your vigilance. Based on your symptoms and history, the leading possibilities include gastritis, peptic ulcer disease, or post-cholecystectomy syndrome. Gastritis and peptic ulcers are inflammation or damage to the stomach lining, often presenting as a gnawing pain. Post-cholecystectomy syndrome can occur after gallbladder surgery, with symptoms similar to those you've described.\n\nHere's a plan:\n1. Start a trial of over-the-counter antacids or proton pump inhibitors, which can help if this is related to your stomach lining.\n2. Avoid spicy, fatty, or acidic foods, which can exacerbate stomach issues.\n3. Try stress management techniques, as stress can worsen gastric discomfort.\n4. Follow up with your primary care doctor for further evaluation, which may include an upper endoscopy or abdominal ultrasound.\n\nPlease seek immediate medical attention if you experience severe abdominal pain, vomiting blood, black or bloody stools, or worsening symptoms despite treatment.",
+        "timestamp": "2026-02-03T23:27:07.641549"
+      }
+    ]
+  },
+  {
+    "conversation_id": "hcm_138e652d4955_gpt-4_6t",
+    "scenario_id": "hcm_138e652d4955",
+    "generator_model": "gpt-4",
+    "patient_simulator": "gpt-4",
+    "total_turns": 6,
+    "generation_params": {
+      "physician_temperature": 0.3,
+      "patient_temperature": 0.8,
+      "max_tokens_per_turn": 350,
+      "num_turns": 6
+    },
+    "created_at": "2026-02-03T23:27:28.444605",
+    "turns": [
+      {
+        "turn_number": 0,
+        "role": "patient",
+        "content": "I have a hole its about the size of a dime at the beggining of my butt crack (gross I know) but Im just wondering how to get rid of it at home I put anti bacterial on it with a q - tip it sizzles but nothing comes out or changes . What do I do ? (At home )",
+        "timestamp": "2026-02-03T23:27:07.642070"
+      },
+      {
+        "turn_number": 1,
+        "role": "physician",
+        "content": "I get your worry. For a clearer picture, could you respond to these queries?\n1. When did you spot this hole initially?\n2. Did you observe any discharge, bleeding, or pain linked to it?\n3. Are there any additional symptoms such as fever or unexpected weight loss?",
+        "timestamp": "2026-02-03T23:27:13.075146"
+      },
+      {
+        "turn_number": 2,
+        "role": "patient",
+        "content": "Well, I first noticed it about three weeks ago. It was smaller then, but it seems to have gotten a bit larger recently. Haven't seen any bleeding or stuff coming out of it, but it does feel tender. As for other symptoms, no fever or weight loss that I've noticed.",
+        "timestamp": "2026-02-03T23:27:15.211041"
+      },
+      {
+        "turn_number": 3,
+        "role": "physician",
+        "content": "Thank you for the additional information. It's important to understand that without a physical examination, it's difficult to make a definitive diagnosis. However, your description could suggest a pilonidal cyst, which is a common condition in the area you described.\n\n1. Have you noticed any redness or swelling around the area?\n2. Have you had any similar issues in the past?\n3. Do you sit for long periods during the day, such as for work or driving?",
+        "timestamp": "2026-02-03T23:27:20.439836"
+      },
+      {
+        "turn_number": 4,
+        "role": "patient",
+        "content": "Oh, I didn't know that could be a thing. Yeah, the area around the hole is kind of red and a bit swollen. I haven't had anything like this before. And yeah I do sit a lot for work, mostly at my desk or driving to meetings.",
+        "timestamp": "2026-02-03T23:27:23.382643"
+      },
+      {
+        "turn_number": 5,
+        "role": "physician",
+        "content": "Based on your responses, the possibility of a pilonidal cyst seems more likely. This condition often occurs in people who sit for prolonged periods and can present as a tender, swollen area in the upper part of the buttock crease.\n\nHere's a plan:\n1. Keep the area clean and dry.\n2. Avoid sitting for long periods if possible.\n3. Over-the-counter pain relievers may help with discomfort.\n\nHowever, it's crucial to seek medical attention as these cysts can become infected and may require surgical intervention. If you notice increasing pain, pus discharge, or develop a fever, seek immediate medical care.",
+        "timestamp": "2026-02-03T23:27:28.444579"
+      }
+    ]
+  },
+  {
+    "conversation_id": "hcm_fa78e2b8b85c_gpt-4_6t",
+    "scenario_id": "hcm_fa78e2b8b85c",
+    "generator_model": "gpt-4",
+    "patient_simulator": "gpt-4",
+    "total_turns": 6,
+    "generation_params": {
+      "physician_temperature": 0.3,
+      "patient_temperature": 0.8,
+      "max_tokens_per_turn": 350,
+      "num_turns": 6
+    },
+    "created_at": "2026-02-03T23:27:42.066071",
+    "turns": [
+      {
+        "turn_number": 0,
+        "role": "patient",
+        "content": "Dear Doctor, We are trying to have a baby and gave it a big try this time but as we are planning to go for an Invitro (ICSI) for the next period, my doctor gave me Primolut Not from day 16 to day 25. I am wondering if this will have a negative impact on my pregnancy if I am pregnant because as explained we gave it a big try this time. Thank you in advance for your response. With my Best Regards; Mme Sue",
+        "timestamp": "2026-02-03T23:27:28.444905"
+      },
+      {
+        "turn_number": 1,
+        "role": "physician",
+        "content": "Primolut N is a medication that contains norethisterone, a synthetic hormone similar to progesterone. It's often used to regulate menstrual cycles or delay periods. If you're already pregnant, it's generally advised to avoid this medication as its effects on early pregnancy are not fully known.\n\n1. Have you taken a pregnancy test to confirm whether you're pregnant or not?\n2. Are you experiencing any pregnancy symptoms?\n3. Have you discussed your concerns about Primolut N with your fertility specialist?",
+        "timestamp": "2026-02-03T23:27:31.413494"
+      },
+      {
+        "turn_number": 2,
+        "role": "patient",
+        "content": "Hi Doctor, thanks for your answer. I haven't taken a pregnancy test yet, I'm still waiting to see if my period is coming up. I don't have any obvious pregnancy symptoms yet, just feeling a bit bloated but that's normal for me before my period. I didn't discuss my concerns about Primolut N with my fertility specialist yet, I was hoping to get some initial information here first. I'm a bit worried, to be honest.",
+        "timestamp": "2026-02-03T23:27:34.597086"
+      },
+      {
+        "turn_number": 3,
+        "role": "physician",
+        "content": "I understand your concerns. It's important to know that Primolut N is generally not recommended during pregnancy because its effects are not fully understood. However, if you took it before knowing you were pregnant, it doesn't necessarily mean harm has been done.\n\n1. When is your period due?\n2. Have you taken any doses of Primolut N yet?\n3. Are there any other medications you're currently taking or have taken recently?",
+        "timestamp": "2026-02-03T23:27:37.239366"
+      },
+      {
+        "turn_number": 4,
+        "role": "patient",
+        "content": "Hi again, my period is actually due in about a week. I've started taking Primolut N already, I'm on day 3 now. Other than that, I've only been taking prenatal vitamins. This whole situation is making me quite anxious.",
+        "timestamp": "2026-02-03T23:27:39.143152"
+      },
+      {
+        "turn_number": 5,
+        "role": "physician",
+        "content": "I understand your anxiety. It's important to remember that the effects of Primolut N on early pregnancy are not fully known, but it doesn't automatically mean harm has been done.\n\n1. Have you noticed any unusual side effects since starting Primolut N?\n2. Are you taking it exactly as prescribed by your fertility specialist?\n3. Would you feel comfortable discussing your concerns with your fertility specialist? They have the most knowledge about your personal situation and treatment plan.",
+        "timestamp": "2026-02-03T23:27:42.066033"
+      }
+    ]
+  },
+  {
+    "conversation_id": "hcm_b339d9bca15a_gpt-4_6t",
+    "scenario_id": "hcm_b339d9bca15a",
+    "generator_model": "gpt-4",
+    "patient_simulator": "gpt-4",
+    "total_turns": 6,
+    "generation_params": {
+      "physician_temperature": 0.3,
+      "patient_temperature": 0.8,
+      "max_tokens_per_turn": 350,
+      "num_turns": 6
+    },
+    "created_at": "2026-02-03T23:28:04.832668",
+    "turns": [
+      {
+        "turn_number": 0,
+        "role": "patient",
+        "content": "Hello, I am in the middle of a serious anxiety/panic attack as I just became aware that I may have a tetanus infection. I am a senior at Clemson University and to be honest the apartment where I resided in the past four months was extremely unsanitary. One toilet was clogged for nearly two months which I now know could have bred bacterial spores that cause tetanus infections. I cut myself shaving around 1 1/2 months ago. I was out of razors and used a razor that had been sitting in the bathroom with the clogged up toilet I mentioned above. I did clean the razor with rubbing alcohol before use however I had an open wound on my face for a while.. About a week. For about a month now I have been feeling extremely irritable, experiencing lockjaw symptoms, been short of breath, had fevers on and off, heart palpitations, and I have noticed that when I smile my face contorts into what one would call a sardonic smile. Am I going to die? Please let me know your opinion",
+        "timestamp": "2026-02-03T23:27:42.066498"
+      },
+      {
+        "turn_number": 1,
+        "role": "physician",
+        "content": "I see that you're anxious. To understand better, could you elaborate on your lockjaw symptoms? Can you fully open your mouth? Please also describe your heart palpitations - their frequency and any accompanying symptoms like chest pain or dizziness. Finally, have you received a tetanus shot before, and when was your most recent one?",
+        "timestamp": "2026-02-03T23:27:48.058631"
+      },
+      {
+        "turn_number": 2,
+        "role": "patient",
+        "content": "The lockjaw is quite annoying. It's not like I can't open my mouth at all, but there's this uncomfortable stiffness, you know? It's like a subtle cramp that's just always there. As for the heart palpitations, they've been happening maybe once or twice a day and they're pretty scary. I don't have any chest pain or dizziness though. About the tetanus shot, I really can't remember the last time I had one. My mom took care of all that stuff when I was a kid, but since I started college, I guess I just lost track.",
+        "timestamp": "2026-02-03T23:27:51.557661"
+      },
+      {
+        "turn_number": 3,
+        "role": "physician",
+        "content": "I understand your concern. Your symptoms could be due to a variety of conditions, not necessarily tetanus. Anxiety, for example, could cause palpitations and muscle stiffness. However, it's important to rule out serious conditions. Have you noticed any changes in your wound since you cut yourself? Is there any difficulty swallowing or muscle weakness? Lastly, could you reach out to your mom to find out when you last received a tetanus shot?",
+        "timestamp": "2026-02-03T23:27:55.907202"
+      },
+      {
+        "turn_number": 4,
+        "role": "patient",
+        "content": "The wound from my shaving cut has completely healed, but I do remember it took a little longer than usual. It didn't look infected or anything, just took a while to close up. Swallowing has been a bit of a struggle lately, now that you mention it. I haven't noticed any muscle weakness though. I'll give my mom a call and ask about the tetanus shot.",
+        "timestamp": "2026-02-03T23:28:01.917076"
+      },
+      {
+        "turn_number": 5,
+        "role": "physician",
+        "content": "Thank you for the additional information. Given your symptoms of lockjaw, difficulty swallowing, and the potential exposure to tetanus, it's important to seek immediate medical attention. While there's a chance this could be due to anxiety or another condition, we cannot rule out tetanus without a proper examination. After you've been evaluated, please also ensure to get an updated tetanus shot. If your symptoms worsen or you develop muscle weakness, go to the emergency room immediately.",
+        "timestamp": "2026-02-03T23:28:04.832626"
+      }
+    ]
+  },
+  {
+    "conversation_id": "hcm_25d2795584e2_gpt-4_6t",
+    "scenario_id": "hcm_25d2795584e2",
+    "generator_model": "gpt-4",
+    "patient_simulator": "gpt-4",
+    "total_turns": 6,
+    "generation_params": {
+      "physician_temperature": 0.3,
+      "patient_temperature": 0.8,
+      "max_tokens_per_turn": 350,
+      "num_turns": 6
+    },
+    "created_at": "2026-02-03T23:28:20.043102",
+    "turns": [
+      {
+        "turn_number": 0,
+        "role": "patient",
+        "content": "Hi hope you can helpive been getting chest pains, not severe but a constant pain, can happen when im just resting but has also happened when im exercising, it continues through to my back as well. I sometimes wake up with chest pains too. i have a strong history of heart disease. grandfather died at 26 from a heat attack and mother had one at 45, also grandmother on the other side had a heart attack. Could you please explain what is happening? Thanks",
+        "timestamp": "2026-02-03T23:28:04.833104"
+      },
+      {
+        "turn_number": 1,
+        "role": "physician",
+        "content": "I'm sorry to hear you're experiencing these symptoms. Given your family history of heart disease, it's important to take chest pain seriously. To help me understand better, could you tell me how long these chest pains have been occurring? Do you experience any other symptoms during these episodes, such as shortness of breath, sweating, or nausea? Lastly, have you had any previous cardiac evaluations or treatments?",
+        "timestamp": "2026-02-03T23:28:07.291589"
+      },
+      {
+        "turn_number": 2,
+        "role": "patient",
+        "content": "I've been experiencing these chest pains for about a couple of months now, on and off. Sometimes I do feel a bit short of breath, but I don't really sweat or feel nauseous. As for cardiac evaluations, I've never had one before. I just didn't think it was necessary until now.",
+        "timestamp": "2026-02-03T23:28:09.319442"
+      },
+      {
+        "turn_number": 3,
+        "role": "physician",
+        "content": "Thank you for sharing that information. Given your symptoms and family history, it's crucial we rule out any heart-related issues. Do you have any known risk factors for heart disease such as high blood pressure, diabetes, high cholesterol, smoking, or obesity? Do the chest pains ever radiate to your arms, jaw, or neck? Lastly, do you notice if anything in particular triggers the pain or makes it worse?",
+        "timestamp": "2026-02-03T23:28:11.449883"
+      },
+      {
+        "turn_number": 4,
+        "role": "patient",
+        "content": "I was diagnosed with high blood pressure a few years ago, but I've been managing it with medication. As for the chest pains, they don't really move to my arms, jaw, or neck. It's like a dull ache in the middle of my chest, moving towards my back. It's hard to pin down any particular triggers... it just seems to happen both when I'm resting and when I'm active.",
+        "timestamp": "2026-02-03T23:28:16.524900"
+      },
+      {
+        "turn_number": 5,
+        "role": "physician",
+        "content": "Given your symptoms, family history, and high blood pressure, conditions like coronary artery disease or angina need to be considered. However, other conditions like acid reflux or musculoskeletal pain could also cause similar symptoms. Here's the plan:\n\n1. Schedule an urgent appointment with your primary care doctor or a cardiologist for a cardiac evaluation, which may include an EKG, stress test, or other imaging.\n2. Continue your blood pressure medication as prescribed.\n3. If your chest pain becomes severe, is associated with severe shortness of breath, fainting, or lasts longer than 15 minutes, seek immediate medical attention.\n\nPlease remember, chest pain can be a sign of a serious condition and should not be ignored.",
+        "timestamp": "2026-02-03T23:28:20.043072"
+      }
+    ]
+  }
+]
