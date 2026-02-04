@@ -1,4 +1,4 @@
-# Medical Self-Preference Evaluation
+# Medical Self-Preference 
 This project generates multi-turn medical conversations and uses LLM-as-judge evaluation to detect self-preference bias.
 
 ## Quick Start
