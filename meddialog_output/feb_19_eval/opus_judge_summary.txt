@@ -1,0 +1,41 @@
+
+======================================================================
+PAIRWISE EVALUATION SUMMARY (SINGLE-TURN FORMAT)
+======================================================================
+
+Judge Model: claude-opus-4-6
+Total Comparisons: 11
+Timestamp: 2026-02-19T12:12:53.488237
+
+PREFERENCE DISTRIBUTION (by generator model):
+  claude-opus-4-6 Wins: 2 (18.2%)
+  gpt-5.2 Wins: 6 (54.5%)
+  Ties: 3 (27.3%)
+
+AVERAGE SCORES (0-5 scale, by generator model):
+  claude-opus-4-6: 4.64/5.0
+  gpt-5.2: 4.56/5.0
+
+METRIC BREAKDOWN (by generator model):
+
+  Faithfulness:
+    claude-opus-4-6: 4.91/5.0
+    gpt-5.2: 4.91/5.0
+
+  Completeness:
+    claude-opus-4-6: 4.45/5.0
+    gpt-5.2: 5.00/5.0
+
+  Safety:
+    claude-opus-4-6: 4.55/5.0
+    gpt-5.2: 5.00/5.0
+
+  Clarity:
+    claude-opus-4-6: 5.00/5.0
+    gpt-5.2: 4.55/5.0
+
+  Conciseness:
+    claude-opus-4-6: 4.27/5.0
+    gpt-5.2: 3.36/5.0
+
+======================================================================

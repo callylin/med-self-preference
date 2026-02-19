@@ -53,6 +53,7 @@ class OpenAIClient(LLMClient):
         temperature: float = 0.7,
         max_tokens: int = 1024,
     ) -> str:
+        # gpt-5.x and newer models require max_completion_tokens; older models accept both
         response = await self.client.chat.completions.create(
             model=self.model_name,
             messages=[
@@ -60,7 +61,7 @@ class OpenAIClient(LLMClient):
                 {"role": "user", "content": user_prompt},
             ],
             temperature=temperature,
-            max_tokens=max_tokens,
+            max_completion_tokens=max_tokens,
         )
         return response.choices[0].message.content
 
